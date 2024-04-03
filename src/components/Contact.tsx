@@ -38,7 +38,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex items-center justify-end z-10">
-              <button className="bg-green  pt-3 pb-3 pr-5 pl-5 rounded-full opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 duration-500 ease-in-out hover:brightness-90 hover:scale-110 duration-500 ease-in-out" onClick={openForm}>
+              <button className="bg-green  pt-3 pb-3 pr-5 pl-5 rounded-full opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 duration-500 ease-in-out hover:brightness-90 hover:scale-110 " onClick={openForm}>
                 <img
                   className="w-4"
                   src="./icon/right-arrow.png"
