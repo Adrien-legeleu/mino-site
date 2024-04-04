@@ -3,9 +3,15 @@ import Form from "./Form";
 
 const Contact = () => {
   const [isVisibleForm, setIsVisibleForm] = useState(false);
+  const [selectDesc, setSelectDesc] = useState(null);
+
+  const handleFormOpen = (desc: any) => {
+    setSelectDesc(desc);
+    setIsVisibleForm(true);
+  };
 
   return (
-    <div className="bg-grayLight shadow-contact_shadow pt-48 grid grid-cols-30/70 pl-10 pr-10 pb-32">
+    <div className="bg-grayLight shadow-contact_shadow pt-48 grid grid-cols-30/70 pl-10 pr-10 pb-32" id="contact">
       <div className="flex items-start">
         <div className="flex gap-2 items-center">
           <div className="h-[1px] w-16 bg-white rounded-full"></div>
@@ -39,7 +45,7 @@ const Contact = () => {
             <div className="flex items-center justify-end z-10">
               <button
                 className="bg-green pt-3 pb-3 pr-5 pl-5 rounded-full opacity-0 translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 duration-500 ease-in-out hover:brightness-90 hover:scale-110 "
-                onClick={() => setIsVisibleForm(true)}
+                onClick={() => handleFormOpen(desc)}
               >
                 <img
                   className="w-4"
@@ -48,12 +54,13 @@ const Contact = () => {
                 />
               </button>
             </div>
-            <Form
-              setIsVisibleForm={setIsVisibleForm}
-              isVisibleForm={isVisibleForm}
-              desc={desc}
-              key={index}
-            />
+            {isVisibleForm && selectDesc && (
+              <Form
+                setIsVisibleForm={setIsVisibleForm}
+                isVisibleForm={isVisibleForm}
+                desc={selectDesc}
+              />
+            )}
           </div>
         ))}
       </div>

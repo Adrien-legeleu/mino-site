@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import LandingPage from "../components/LandingPage";
 import Offers from "../components/Offers";
 import Services from "../components/Services";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <Services/>
       <Offers/>
       <Contact/>
+      <Footer/>
     </>
   );
 };
