@@ -49,12 +49,68 @@ const Form: React.FC<FormProps> = ({
           <form className="mt-16 flex flex-col gap-8">
             <div className="relative h-11 w-full min-w-[200px]">
               <input
+                type="text"
                 placeholder="Standard"
                 className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
               />
-              <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white">
-                Standard
+              <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white duration-300 ease-in-out">
+                Prénom
               </label>
+            </div>
+            <div className="relative h-11 w-full min-w-[200px]">
+              <input
+                type="text"
+                placeholder="Standard"
+                className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
+              />
+              <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white duration-300 ease-in-out">
+                Nom
+              </label>
+            </div>
+            <div className="relative h-11 w-full min-w-[200px]">
+              <input
+                type="text"
+                placeholder="Standard"
+                className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
+              />
+              <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white duration-300 ease-in-out">
+                Société
+              </label>
+            </div>
+            <div className="relative h-11 w-full min-w-[200px]">
+              <input
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="Standard"
+                className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
+              />
+              <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white duration-300 ease-in-out">
+                Email *
+              </label>
+            </div>
+            <div className="relative h-11 w-full min-w-[200px]">
+              <input
+                type="tel"
+                autoComplete="tel"
+                placeholder="Standard"
+                className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
+              />
+              <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white duration-300 ease-in-out">
+                Téléphone
+              </label>
+            </div>
+            <div className="relative w-full min-w-[200px]">
+              <textarea
+                className="peer h-full min-h-[80px] w-full resize-none border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGray focus:border-grayWhite focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-whiteGray"
+                placeholder=" "
+              ></textarea>
+              <label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2  after:block after:w-full after:scale-x-0 after:border-b-2  after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-whiteGray duration-300 ease-in-out">
+                Message
+              </label>
+            </div>
+            <div className=" mt-8">
+                <button className=" w-full bg-green p-3 rounded-full text-xl hover:scale-90 duration-300 ease-in-out hover:brightness-90">Valider & envoyer</button>
             </div>
           </form>
         </div>
