@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Header />
       <LandingPage />
-      <div className="h-screen flex items-center justify-center bg-grayLight ">
+      <div className="h-full pt-10 flex items-center justify-center bg-grayLight ">
         <video
           className="w-[95%] aspect-video rounded-3xl"
           autoPlay

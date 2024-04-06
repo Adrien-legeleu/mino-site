@@ -7,7 +7,7 @@ const LandingPage = () => {
         </h2>
       </div>
       <div className=" pr-8 pb-16 flex items-end justify-end w-full h-full bg-[url('../assets/Instagram Post Mockup Mosaic.png')] bg-cover">
-        <p className="text-white text-lg">Agence Digitale surmesure. slogan...</p>
+        <p className="text-white lg:text-lg text-xl sm:text-2xl">Agence Digitale surmesure. slogan...</p>
       </div>
     </div>
   );

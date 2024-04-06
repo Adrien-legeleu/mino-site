@@ -18,7 +18,7 @@ export default {
         "20/80": "20% 80%",
       },
       boxShadow: {
-        card: "0 0 30px 0 rgba(0,0,0,0.2)",
+        card: "0 0 30px 0 rgba(0,0,0,0.13)",
         services: "0 10px 50px 0 rgba(200,200,200,0.2)",
         containerService: "10px 0 50px 0 rgba(0,0,0,0.6)",
         offer_shadow: "0px 0 50px 50px rgb(67,74,84)",
