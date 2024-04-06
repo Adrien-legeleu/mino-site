@@ -12,11 +12,11 @@ const Offers = () => {
     }
 
   return (
-    <div className="flex items-center justify-center flex-col pt-36 h-full bg-grayDark gap-6  shadow-offer_shadow">
+    <div className="flex items-center justify-center flex-col pt-36 h-full bg-grayDark gap-6 pl-10 sm:pl-20 sm:pr-20 pr-10 md:pr-0 md:pl-0 shadow-offer_shadow" id='offre'>
       <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
       <Splide
         options={{
-            perPage:3,
+            perPage:window.innerWidth < 1050 ? (window.innerWidth > 768 ? 2 : 1) : 3,
             gap:20,
             pagination:false
         }}
@@ -26,23 +26,23 @@ const Offers = () => {
           <SplideSlide key={index}>
            <div
               className={`flex flex-col gap-6 mb-20 group relative shadow-lg rounded-xl px-6 py-8 ${
-                !isListeAll ? "h-[450px]" : "h-full"
+                !isListeAll ? "h-[500px]" : "h-full"
               } overflow-x-hidden cursor-pointer `}
-              style={{ backgroundColor: offer.color, scrollbarWidth: "none" }}
+              style={{ background: offer.color, scrollbarWidth: "none" }}
             >
               <h2 className="text-black text-center text-4xl">{offer.title}</h2>
               <p className="text-black text-center">{offer.description}</p>
               <ul>
                         <li className='flex flex-row items-center justify-start gap-3 mt-2 mb-2'>
                             <img className="h-6 " src="./icon/check.png" alt="valid" />
-                            <p className='text-lime-800'>{listePage[index].desc}</p>
+                            <p className='text-black'>{listePage[index].desc}</p>
                         </li>
                     
                 
                 {lenghtListe.map((liste, index) => (
                   <li
                     className={`${
-                      offer.features[index] ? "text-lime-700 " : "text-red-800"
+                      offer.features[index] ? "text-black " : "text-red-800"
                     } flex flex-row items-center justify-start gap-3 mt-2 mb-2`}
                     key={index}
                   >
@@ -84,7 +84,11 @@ const offers = [
       true, true, true, true, false, false, false, false, false, false, 
       false, false, false, false, false, false
     ],
-    color: "#80BFFF",
+    color: "linear-gradient(194deg, #aee4ee 0%, #71a0d6 100%)",
+
+
+
+
   },
   {
     title: "avancé",
@@ -94,7 +98,7 @@ const offers = [
       true, true, true, true, false, true, true, true, false, false, 
       false, false, false, false, false , false
     ],
-    color: "#80BFFF",
+    color: " linear-gradient(194deg, #bef577 0%, #609ee4 100%)",
   },
   {
     title: "pro",
@@ -104,7 +108,7 @@ const offers = [
       true, true, true, true, true, true, true, true, true, true, 
       true, true,  false, false, false, false
     ],
-    color: "#80BFFF",
+    color: "linear-gradient(194deg, #228cee 0%, #4c82c0 100%)",
   },
   {
     title: "ultra",
@@ -114,7 +118,7 @@ const offers = [
       true, true, true, true, true, true, true, true, true, true, 
       true, true, true, true, true, true
     ],
-    color: "#6fa2ee",
+    color: "linear-gradient(194deg, #1855da 0%, #2077db 100%)",
   },
 ];
 

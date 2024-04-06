@@ -1,8 +1,8 @@
 const LandingPage = () => {
   return (
     <div className="h-screen w-full grid grid-cols-2  bg-grayLight"> 
-      <div className=" pb-16 pl-8 flex items-end justify-start w-full h-full"  >
-        <h2 className="text-8xl text-white">
+      <div className=" pb-16 pl-8 flex items-center lg:items-end justify-start w-full h-full"  >
+        <h2 className="lg:text-8xl text-5xl md:text-7xl text-white">
              <span className="text-green">We make</span> <br /> digital <br /> [innovations]
         </h2>
       </div>

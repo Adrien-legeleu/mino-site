@@ -32,10 +32,17 @@ const Form: React.FC<FormProps> = ({
           onClick={closeForm}
         ></div>
         <div
-          className={`h-[95%] w-2/5 bg-grayDark absolute top-1/2 right-10 rounded-3xl -translate-y-1/2 flex flex-col pb-20 pt-24 pl-16 pr-16  shadow-containerService duration-500 ease-in-out overflow-y-auto ${
+          className={`h-[95%] lg:w-[45%] md:w-[70%] w-[100%] bg-grayDark absolute top-1/2 md:right-10   rounded-3xl -translate-y-1/2 flex flex-col pb-20 pt-24 pl-16 pr-16 shadow-containerService duration-500 ease-in-out overflow-y-auto ${
             isVisibleForm ? "translate-x-0" : "translate-x-[150%] right-0"
           }`}
+          style={{
+            scrollbarWidth: "thin",
+            scrollbarColor: "green",
+          }}
         >
+          <div className="absolute top-10 right-10 w-14 p-2 cursor-pointer hover:scale-110 duration-300 ease-in-out brightness-125" onClick={closeForm}>
+            <img className="w-full" src="./icon/close-white.png" alt="fermer" />
+          </div>
           <div className="bg-[rgba(30,30,30,0.4)] rounded-3xl flex min-h-24 min-w-24 w-24 items-center justify-center mb-8">
             <img className="w-14" src={desc.icon} alt="icon" />
           </div>
@@ -110,7 +117,9 @@ const Form: React.FC<FormProps> = ({
               </label>
             </div>
             <div className=" mt-8">
-                <button className=" w-full bg-green p-3 rounded-full text-xl hover:scale-90 duration-300 ease-in-out hover:brightness-90">Valider & envoyer</button>
+              <button className=" w-full bg-green p-3 rounded-full text-xl hover:scale-90 duration-300 ease-in-out hover:brightness-90">
+                Valider & envoyer
+              </button>
             </div>
           </form>
         </div>
