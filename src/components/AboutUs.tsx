@@ -2,18 +2,18 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 const AboutUs = () => {
   return (
-    <div className="lg:grid lg:grid-cols-30/70 bg-grayLight pt-40 pl-8 pr-8 lg:pr-16 flex flex-col">
+    <div className="lg:grid lg:grid-cols-30/70 bg-grayLight pt-40 pl-2 pr-2 md:pl-8 md:pr-8 lg:pr-16 flex flex-col">
       <div className="flex flex-row items-start justify-start ">
         <div className="w-10 h-0.5 bg-white mr-3 relative top-2.5"></div>
         <h3 className="text-white">Pourquoi-nous ?</h3>
       </div>
       <div className="flex flex-col gap-32">
-        <p className="text-white  tracking-wide leading-[40px] md:leading-[55px] indent-12 md:text-4xl text-xl  lg:text-3xl xl:text-5xl  mt-10 lg:m-0">
+        <p className="text-white  tracking-wide leading-[40px] md:leading-[55px] text-center lg:text-start  lg:indent-12 md:text-4xl text-xl  lg:text-3xl xl:text-5xl  mt-10 lg:m-0">
           Grâce à une expérience forte acquise par des centaines de projets,
           nous vous proposons un accompagnement complet, de la conception à la
           mise en œuvre opérationnelle.
         </p>
-        {window.innerWidth > 700 ? (
+        {window.innerWidth > 768 ? (
           <div className="flex flex-col gap-4">
             {Cards.map((card, index) => (
               <div
@@ -35,33 +35,36 @@ const AboutUs = () => {
             ))}
           </div>
         ) : (
-                <Splide
-                  options={{
-                    perPage:1,
-                    gap: 20,
-                    pagination: false,
-                  }}
+          <Splide
+            options={{
+              perPage: 1,
+              gap: 20,
+              pagination: true,
+              arrows:false,
+              rewind: true,
+              rewindByDrag: true,
+            }}
+          >
+            {Cards.map((card, index) => (
+              <SplideSlide>
+                <div
+                  key={index}
+                  className=" relative  flex flex-col bg-grayDark rounded-3xl h-[220px]  shadow-card  hover:brightness-110 ease-out duration-300 group"
                 >
-              {Cards.map((card, index) => (
-                <SplideSlide>
-                  <div
-                    key={index}
-                    className=" relative  flex flex-col bg-grayDark rounded-3xl h-[220px]  shadow-card  hover:brightness-110 ease-out duration-300 group"
-                  >
-                    <div className="text-whiteGray flex flex-col justify-between p-10  h-full">
-                      <h4 className="sm:text-xl text-md ">{card.title}</h4>
-                      <p className="text-sm sm:text-md ">{card.text}</p>
-                    </div>
-                    <div className=" flex items-center justify-center absolute w-[100px] h-[100px] top-3 right-4">
-                      <img
-                        className="group-hover:scale-110 duration-300 ease-out w-[95%] h-[95%] object-contain"
-                        src={card.img}
-                        alt={card.title}
-                      />
-                    </div>
+                  <div className="text-whiteGray flex flex-col justify-between p-5 pb-6 pr-7  h-full">
+                    <h4 className="sm:text-xl text-md ">{card.title}</h4>
+                    <p className="text-sm sm:text-md ">{card.text}</p>
                   </div>
-                </SplideSlide>
-              ))}
+                  <div className=" flex items-center justify-center absolute w-[90px] h-[90px] -top-2 right-0">
+                    <img
+                      className="group-hover:scale-110 duration-300 ease-out w-[95%] h-[95%] object-contain"
+                      src={card.img}
+                      alt={card.title}
+                    />
+                  </div>
+                </div>
+              </SplideSlide>
+            ))}
           </Splide>
         )}
       </div>

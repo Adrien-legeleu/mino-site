@@ -30,17 +30,17 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center justify-start lg:ml-24 ml-2">
-        <h1 className="text-white text-3xl tracking-wide">MINO</h1>
+        <h1 className="text-white text-3xl tracking-wide text-shadow-lg">MINO</h1>
       </div>
       {window.innerWidth > 950 ? (
         <ul className="flex items-center justify-evenly backdrop-blur-lg rounded-full p-2 bg-[rgba(0,0,0,0.1)] ">
-          <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in-out">
+          <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in-out">
             Offre
           </li>
-          <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
+          <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
             Réalisations
           </li>
-          <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-out">
+          <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-out">
             Contact
           </li>
         </ul>
