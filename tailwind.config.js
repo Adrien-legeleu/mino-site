@@ -15,7 +15,7 @@ export default {
       gridTemplateColumns: {
         "30/70": "35% 65%",
         "80/20": "70% 30%",
-        "90/10": "80% 20%",
+        "90/10": "75% 25%",
         "20/80": "20% 80%",
       },
       boxShadow: {
@@ -26,7 +26,7 @@ export default {
         contact_shadow: "0px 0 50px 50px rgb(83,90,100)",
       },
       textShadow: {
-        lg: "0 8px 16px black",
+        lg: "0 8px 16px rgba(0,0,0,0.8)",
       },
     },
   },
