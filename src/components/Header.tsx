@@ -23,6 +23,9 @@ const Header = () => {
   const handleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
   };
+  const scrollToTop=()=>{
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div
@@ -33,7 +36,7 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center justify-start lg:ml-24 ml-2">
-        <Link to="/#offre">
+        <Link to="/" onClick={scrollToTop}>
           <h1 className="text-white text-3xl tracking-wide text-shadow-lg">
             MINO
           </h1>
@@ -41,12 +44,12 @@ const Header = () => {
       </div>
       {window.innerWidth > 950 ? (
         <ul className="flex items-center justify-evenly backdrop-blur-lg rounded-full p-2 bg-[rgba(0,0,0,0.1)] ">
-          <Link to="/#service">
+          <Link to="/#offre" onClick={scrollToTop}>
             <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in-out">
               Offre
             </li>
           </Link>
-          <Link to="/realisations">
+          <Link to="/realisations" onClick={scrollToTop}>
             <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
               Réalisations
             </li>
@@ -80,21 +83,25 @@ const Header = () => {
             <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in-out">
               Offre
             </li>
-            <Link to="/realisation">
+            <Link to="/realisation" onClick={scrollToTop}>
               <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
                 Réalisations
               </li>
             </Link>
-            <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-out">
-              Services
-            </li>
+            <Link to="/#service"onClick={scrollToTop}>
+              <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-out">
+                Services
+              </li>
+            </Link>
           </ul>
         </div>
       )}
       <div className=" flex items-center justify-end lg:pr-12 pr-2 w-full">
-        <button className="p-4 bg-green rounded-full text-sm md:text-md">
-          Un besoin ?
-        </button>
+        <Link to="/#contact">
+          <button className="p-4 bg-green rounded-full text-sm md:text-md">
+            Un besoin ?
+          </button>
+        </Link>
       </div>
     </div>
   );

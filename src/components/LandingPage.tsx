@@ -1,13 +1,26 @@
+import { Typewriter } from "react-simple-typewriter";
+
 const LandingPage = () => {
+
   return (
-    <div className="h-screen w-full grid grid-cols-2  bg-grayLight"> 
-      <div className=" pb-16 pl-8 flex items-center lg:items-end justify-start w-full h-full"  >
-        <h2 className="lg:text-8xl text-5xl md:text-7xl text-white">
-             <span className="text-green">We make</span> <br /> digital <br /> [innovations]
+    <div className="h-screen w-full grid grid-cols-2 bg-[url('../src/assets/Untitled.svg')] bg-cover z-10">
+      <div className="pb-16 pl-8 flex items-center lg:items-end justify-start w-full h-full">
+        <h2 className="lg:text-8xl text-5xl md:text-7xl text-white z-10">
+          <span className="text-green">We make</span> <br /> digital <br />{" "}
+         [ <Typewriter  words={['innovations', 'products', 'great again' , "strategy"]}
+            loop={true}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            />]
         </h2>
       </div>
-      <div className=" pr-8 pb-16 flex items-end justify-end w-full h-full bg-[url('../assets/Instagram Post Mockup Mosaic.png')] bg-cover">
-        <p className="text-white lg:text-lg text-xl sm:text-2xl">Agence Digitale surmesure. slogan...</p>
+      <div className="pr-8 pb-16 flex items-end justify-end w-full h-full ">
+        <p className="text-white lg:text-lg text-xl sm:text-2xl z-10 backdrop-blur-[3px]">
+          Agence Digitale surmesure. slogan...
+        </p>
       </div>
     </div>
   );
