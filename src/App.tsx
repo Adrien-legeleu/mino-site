@@ -1,7 +1,6 @@
 import {BrowserRouter , Routes , Route} from "react-router-dom"
 import Home from "./pages/Home"
 import Realisation from "./pages/Realisation"
-import ScrollToTop from "./components/ScrollToTop"
 
 const App=()=>{
   return (

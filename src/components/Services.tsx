@@ -7,9 +7,7 @@ const Services = () => {
   const OpenContainerVisible = () => {
     setIsInfoContainerVisible(true);
   };
-  const closeContainerVisible = () => {
-    setIsInfoContainerVisible(false);
-  };
+
 
   return (
     <div className="h-full w-full bg-grayLight pt-48 pb-28 ">

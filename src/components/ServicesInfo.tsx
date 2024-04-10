@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface ServiceProps {
     setIsInfoContainerVisible: React.Dispatch<React.SetStateAction<boolean>>,
     isInfoContainerVisible:boolean
@@ -6,28 +8,34 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
       const closeContainerVisible = () => {
     setIsInfoContainerVisible(false);
   };
+  const scrollToTop=()=>{
+    window.scrollTo(0, 0);
+  }
     return(
-        <div>
+        <div >
             <div
-        className={`fixed rounded-t-3xl  w-[100%]  h-[80%] bottom-0  bg-white shadow-containerService left-0 flex flex-col  duration-500 ease-out z-10 ${
+        className={`fixed rounded-t-[60px]  w-[100%]  h-[80%] bottom-0  bg-grayDark shadow-containerService left-0 flex flex-col  duration-500 ease-out z-10 ${
           isInfoContainerVisible
             ? "transform translate-none visible"
             : "transform -translate-x-full invisible"
         }`}
       >
-        <ul className=" relative pl-5 flex pt-5 pb-4  items-center justify-center gap-2 bg-[rgba(0,0,0,0.04)] sm:bg-transparent ">
+        <ul className=" relative pl-5 flex pt-5 pb-4  items-center justify-center gap-2 ">
+            <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
           {infoContainerServices.map((info, index) => (
             <a href={`#${info.id}`}>
               <li key={`numéro : ${index}`}>
-                <button className="text-sm text-center lg:text-lg pl-5 pr-5 pb-3 pt-3 bg-green rounded-full">{info.title}</button>
+                <button className="text-sm text-center lg:text-lg pl-5 pr-5 pb-3 pt-3 bg-green rounded-full hover:scale-[1.03] duration-100">{info.title}</button>
               </li>
             </a>
           ))}
           <div
-            className=" cursor-pointer ml-20 "
+            className=" cursor-pointer absolute top-4 right-10"
             onClick={closeContainerVisible}
           >
-            <button className="pl-5 pr-5 pt-3 pb-3 bg-red-600 rounded-full text-white text-md lg:text-xl">Fermer</button>
+            <div className="w-12 p-3 rounded-full bg-[rgb(230,230,230)] hover:scale-110 duration-300 cursor-pointer">
+                <img className="w-full" src="./icon/close-white.png" alt="close" />
+            </div>
           </div>
         </ul>
         <div
@@ -42,17 +50,19 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
               key={`infos-${index}`}
               id={info.id}
             >
-              <h3 className=" text-center text-3xl">{info.title}</h3>
-              <p className=" mb-10 mt-10 text-center text-sm lg:text-md lg:leading-9 leading-7">{info.text}</p>
+              <h3 className=" text-center text-3xl text-white">{info.title}</h3>
+              <p className=" mb-10 mt-10 text-center text-sm lg:text-md lg:leading-8 leading-6 text-whiteGray">{info.text}</p>
+              <Link to="/realisations" onClick={scrollToTop} >
               <button className="p-5 bg-green rounded-full ease-out duration-300 hover:scale-110">
                 voir nos réalisations
               </button>
+              </Link>
             </div>
           ))}
         </div>
       </div>
       <div
-        className={`fixed z-0 top-0 left-0 w-screen h-screen bg-transparent ${
+        className={`fixed z-0 top-0 left-0 w-screen h-screen bg-transparent  ${
           isInfoContainerVisible ? "block" : "hidden"
         }`}
         onClick={closeContainerVisible}

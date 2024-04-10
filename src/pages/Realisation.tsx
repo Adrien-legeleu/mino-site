@@ -70,6 +70,11 @@ const ScreenShotSite=[
         url:"https://le-resto.netlify.app"
     },
     {
+        title:"MINO AI",
+        img:"",
+        url:"https://mino-ai.netlify.app"
+    },
+    {
         title:"",
         img:"",
         url:""
