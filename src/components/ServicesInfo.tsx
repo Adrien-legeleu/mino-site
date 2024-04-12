@@ -12,15 +12,15 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
     window.scrollTo(0, 0);
   }
     return(
-        <div >
+        <div  >
             <div
-        className={`fixed rounded-t-[60px]  w-[100%]  h-[80%] bottom-0  bg-grayDark shadow-containerService left-0 flex flex-col  duration-500 ease-out z-10 ${
+        className={`fixed md:rounded-t-[60px] rounded-t-[30px]  w-[100%] pt-4 h-[100%] bottom-0  bg-grayDark shadow-containerService left-0 flex flex-col  duration-300 ease-out z-[100] ${
           isInfoContainerVisible
             ? "transform translate-none visible"
-            : "transform -translate-x-full invisible"
+            : "transform translate-y-full invisible"
         }`}
       >
-        <ul className=" relative pl-5 flex pt-5 pb-4  items-center justify-center gap-2 ">
+        <ul className="  pl-5 p-5  items-center justify-center gap-2 m-auto bg-[#393d44] rounded-full hidden md:flex">
             <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
           {infoContainerServices.map((info, index) => (
             <a href={`#${info.id}`}>
@@ -29,15 +29,15 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
               </li>
             </a>
           ))}
+        </ul>
           <div
-            className=" cursor-pointer absolute top-4 right-10"
+            className=" cursor-pointer absolute top-6 right-2  md:top-4 md:right-10"
             onClick={closeContainerVisible}
           >
-            <div className="w-12 p-3 rounded-full bg-[rgb(230,230,230)] hover:scale-110 duration-300 cursor-pointer">
+            <div className="w-8 md:w-12 p-[6px] md:p-3 rounded-full bg-[rgb(230,230,230)] hover:scale-110 duration-300 cursor-pointer">
                 <img className="w-full" src="./icon/close-white.png" alt="close" />
             </div>
           </div>
-        </ul>
         <div
           className="w-full pr-5 pl-5 sm:p-0 overflow-y-auto max-w-[800px] m-auto"
           style={{ scrollbarWidth: "none" }}
@@ -50,8 +50,8 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
               key={`infos-${index}`}
               id={info.id}
             >
-              <h3 className=" text-center text-3xl text-white">{info.title}</h3>
-              <p className=" mb-10 mt-10 text-center text-sm lg:text-md lg:leading-8 leading-6 text-whiteGray">{info.text}</p>
+              <h3 className=" text-center text-2xl md:text-3xl text-white">{info.title}</h3>
+              <p className=" mb-10 mt-10 text-center text-[0.75rem] sm:text-sm lg:text-md lg:leading-8 leading-6 text-whiteGray">{info.text}</p>
               <Link to="/realisations" onClick={scrollToTop} >
               <button className="p-5 bg-green rounded-full ease-out duration-300 hover:scale-110">
                 voir nos réalisations
@@ -61,12 +61,6 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
           ))}
         </div>
       </div>
-      <div
-        className={`fixed z-0 top-0 left-0 w-screen h-screen bg-transparent  ${
-          isInfoContainerVisible ? "block" : "hidden"
-        }`}
-        onClick={closeContainerVisible}
-      ></div>
         </div>
     )
 }

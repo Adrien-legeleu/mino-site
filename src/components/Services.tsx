@@ -10,21 +10,21 @@ const Services = () => {
 
 
   return (
-    <div className="h-full w-full bg-grayLight pt-48 pb-28 ">
+    <div className="h-full w-full bg-grayLight pt-48 pb-48 ">
       <h2 className="text-center text-white text-5xl">Nos Services</h2>
       <div className=" flex flex-col lg:grid lg:grid-cols-30/70 mt-16">
         <div className= "hidden lg:flex lg:flex-col items-center justify-center gap-10">
           {servicesInfos.map((serviceInfo, index) => (
             <div
               key={`serviceInfo : ${index}`}
-              className="lg:h-80 lg:w-80 p-5 rounded-full  shadow-services "
+              className="lg:h-80 lg:w-80 p-5 rounded-full  shadow-services flex flex-col justify-between"
             >
               <img
                 src={serviceInfo.img}
                 alt={serviceInfo.title}
-                className="w-full h-4/5 object-contain "
+                className={`w-full h-[70%] object-contain relative ${index == 1 ? "top-8" : ""}`}
               />
-              <h5 className="text-center text-whiteGray text-xl">
+              <h5 className="text-center text-whiteGray text-xl md:text-2xl">
                 {serviceInfo.title}
               </h5>
             </div>
@@ -32,7 +32,7 @@ const Services = () => {
         </div>
         <div className="relative grid-cols-1  grid lg:block gap-10 lg:gap-0 pl-3 pr-3 lg:p-0 mt-20 lg:m-0" id="service">
           <a className="block" href="#3" onClick={OpenContainerVisible}>
-            <div className=" relative h-[250px]  lg:absolute lg:top-10 lg:left-20 lg:h-64 lg:w-2/4 rounded-[35px] bg-[url(./template/hebergement.jpg)] bg-cover flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300">
+            <div className=" relative h-[250px]  lg:absolute lg:top-10 lg:left-20 lg:h-64 lg:w-2/4 rounded-[35px] bg-[url(./template/hebergement.jpg)] bg-cover flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300 shadow-services">
               <div className="absolute top-0 left-0 w-full h-full rounded-[35px] bg-[rgba(0,0,0,0.2)] duration-300 ease-in-out group-hover:bg-[rgba(0,0,0,0.3)]"></div>
 
               <h1 className="text-center text-2xl sm:text-4xl md:text-5xl backdrop-blur-[1px] text-white">
@@ -46,7 +46,7 @@ const Services = () => {
             </div>
           </a>
           <a  href="#1" onClick={OpenContainerVisible}>
-            <div className=" relative h-[250px]  lg:absolute lg:top-[340px] lg:right-8 lg:h-80 lg:w-2/5 rounded-[35px] bg-[url(./template/music.jpg)] bg-cover  flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300">
+            <div className=" relative h-[250px]  lg:absolute lg:top-[340px] lg:right-8 lg:h-80 lg:w-2/5 rounded-[35px] bg-[url(./template/music.jpg)] bg-cover  flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300 shadow-services">
               <div className="absolute top-0 left-0 w-full h-full rounded-[35px] bg-[rgba(0,0,0,0.2)] duration-300 ease-in-out group-hover:bg-[rgba(0,0,0,0.3)]"></div>
 
               <h1 className="text-center text-2xl sm:text-4xl md:text-5xl backdrop-blur-[1px] text-white">
@@ -60,7 +60,7 @@ const Services = () => {
             </div>
           </a>
           <a href="#2" onClick={OpenContainerVisible}>
-            <div className=" relative h-[250px]  lg:absolute lg:bottom-72 lg:left-12 lg:h-80 lg:w-2/5 rounded-[35px] bg-[url(./template/sushi.jpg)] bg-cover bg-center  flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300">
+            <div className=" relative h-[250px]  lg:absolute lg:bottom-72 lg:left-12 lg:h-80 lg:w-2/5 rounded-[35px] bg-[url(./template/sushi.jpg)] bg-cover bg-center  flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300 shadow-services">
               <div className="absolute top-0 left-0 w-full h-full rounded-[35px] bg-[rgba(0,0,0,0.2)] duration-300 ease-in-out group-hover:bg-[rgba(0,0,0,0.3)]"></div>
               <h1 className="text-center text-2xl sm:text-4xl md:text-5xl backdrop-blur-[1px] text-white">
                 Site Vitrine
@@ -73,7 +73,7 @@ const Services = () => {
             </div>
           </a>
           <a href="#4" onClick={OpenContainerVisible}>
-            <div className=" relative h-[250px]  lg:top-none lg:absolute lg:bottom-1 lg:right-10 lg:h-64 lg:w-2/4 rounded-[35px] bg-[url(./template/glace.jpg)] bg-cover  flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300">
+            <div className=" relative h-[250px]  lg:top-none lg:absolute lg:bottom-1 lg:right-10 lg:h-64 lg:w-2/4 rounded-[35px] bg-[url(./template/glace.jpg)] bg-cover  flex flex-col items-center justify-center group hover:scale-[0.96] eae-in-out duration-300 shadow-services">
               <div className="absolute top-0 left-0 w-full h-full rounded-[35px] bg-[rgba(0,0,0,0.2)] duration-300 ease-in-out group-hover:bg-[rgba(0,0,0,0.3)]"></div>
 
               <h1 className="text-center text-2xl sm:text-4xl md:text-5xl backdrop-blur-[1px] text-white">
@@ -98,15 +98,15 @@ export default Services;
 const servicesInfos = [
   {
     title: "Sécurisé",
-    img: "./image-3d/cloud (2).png",
+    img: "./image-3d/sécuriser.png",
   },
   {
     title: "Optimisé",
-    img: "./image-3d/fusé.png",
+    img: "./image-3d/optimisé.png",
   },
   {
     title: "Sur-mesure",
-    img: "./image-3d/performant (2).png",
+    img: "./image-3d/sur-mesure.png",
   },
 ];
 

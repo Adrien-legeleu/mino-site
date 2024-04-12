@@ -54,12 +54,15 @@ const Header = () => {
               Réalisations
             </li>
           </Link>
-          <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-out">
-            Services
-          </li>
+          <Link to="/#service" onClick={scrollToTop}>
+            <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
+              Services
+            </li>
+          </Link>
         </ul>
       ) : (
         <div>
+          <div className={`absolute w-full h-screen top-0 left-0 bg-transparent ${isMenuVisible ? "block" : "hidden"}`} onClick={handleMenu}></div>
           <div
             className=" relative bg-blackTransparent backdrop-blur-lg hover:scale-110 hover:brightness-125 cursor-pointer duration-300 md:w-12 md:h-12 w-10 h-10 m-auto rounded-full p-2"
             onClick={handleMenu}
@@ -80,14 +83,16 @@ const Header = () => {
               isMenuVisible ? "opacity-100 visible" : " opacity-0 invisible"
             }`}
           >
-            <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in-out">
-              Offre
-            </li>
-            <Link to="/realisation" onClick={scrollToTop}>
+              <Link to="/#offre" onClick={scrollToTop}>
               <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
-                Réalisations
+                Offre
               </li>
             </Link>
+            <Link to="/realisations" onClick={scrollToTop}>
+            <li className="text-shadow-lg text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-in">
+              Réalisations
+            </li>
+          </Link>
             <Link to="/#service"onClick={scrollToTop}>
               <li className="text-white rounded-full hover:bg-blackTransparent pt-2 pb-2 pl-6 pr-6 cursor-pointer ease-out">
                 Services

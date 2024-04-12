@@ -3,9 +3,9 @@ import { Typewriter } from "react-simple-typewriter";
 const LandingPage = () => {
 
   return (
-    <div className="h-screen w-full grid grid-cols-2 bg-[url('../src/assets/Untitled.svg')] bg-cover z-10">
-      <div className="pb-16 pl-8 flex items-center lg:items-end justify-start w-full h-full">
-        <h2 className="lg:text-8xl text-5xl md:text-7xl text-white z-10">
+    <div className="h-screen w-full grid lg:grid-cols-2 bg-[url('../src/assets/Untitled.svg')] bg-cover z-10">
+      <div className="pb-16 pl-8 flex items-end justify-start w-full h-full">
+        <h2 className="lg:text-8xl xl:text-9xl text-[3.4rem] md:text-7xl text-white z-10">
           <span className="text-green">We make</span> <br /> digital <br />{" "}
          [ <Typewriter  words={['innovations', 'products', 'great again' , "strategy"]}
             loop={true}

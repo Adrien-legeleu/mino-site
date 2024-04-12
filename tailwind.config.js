@@ -10,6 +10,7 @@ export default {
         green: "#DCFFBA",
         white: "#FFFFFF",
         blackTransparent: "#20000074",
+        blackGradient: "#2f2f33",
         whiteGray: "#B2B6BB",
       },
       gridTemplateColumns: {
@@ -20,13 +21,14 @@ export default {
       },
       boxShadow: {
         card: "0 0 30px 0 rgba(0,0,0,0.13)",
-        services: "0 10px 50px 0 rgba(200,200,200,0.2)",
+        services: "0 10px 30px 0 rgba(0,0,0,0.1)",
         containerService: "10px 0 50px 0 rgba(0,0,0,0.6)",
         offer_shadow: "0px 0 50px 50px rgb(67,74,84)",
         contact_shadow: "0px 0 50px 50px rgb(83,90,100)",
       },
       textShadow: {
         lg: "0 8px 16px rgba(0,0,0,0.8)",
+        sm: "0 8px 16px rgba(0,0,0,0.3)",
       },
     },
   },
