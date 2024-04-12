@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-grayLight shadow-contact_shadow pt-48 flex flex-col lg:grid lg:grid-cols-30/70 pl-4 pr-4 md:pl-10 md:pr-10 pb-32" id="contact">
+    <div className="bg-grayLight shadow-contact_shadow pt-48 flex flex-col lg:grid lg:grid-cols-30/70 pl-4 pr-4 md:pl-10 md:pr-10 pb-32 max-w-[1600px] m-auto" id="contact">
       <div className="flex items-start">
         <div className="flex gap-2 items-center">
           <div className="h-[1px] w-16 bg-white rounded-full"></div>
@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-green lg:text-6xl md:text-5xl sm:text-4xl text-3xl mt-16 lg:m-0  mb-2">Contactez-nous !</h2>
+        <h2 className="text-green lg:text-6xl md:text-5xl sm:text-4xl text-3xl mt-16 lg:mt-0  mb-5">Contactez-nous !</h2>
         <p className="lg:text-5xl md:text-4xl sm:text-3xl text-2xl mb-16 text-white leading-tight">
           Nous sommes toujours en quête de nouveautés et de nouvelles
           rencontres.
@@ -31,7 +31,7 @@ const Contact = () => {
           >
             <div className="bg-[rgb(95,103,114)] opacity-0 rounded-3xl w-full h-full absolute top-0 left-0 group-hover:opacity-100 duration-300 ease-in-out "></div>
             <div className="grid grid-cols-20/80 gap-4 md:gap-8 group-hover:translate-x-5 duration-500 ease-in-out z-10 items-center">
-              <div className="bg-[rgba(30,30,30,0.4)] lg:rounded-3xl rounded-2xl h-[70%] w-full flex items-center justify-center ">
+              <div className="bg-[rgba(30,30,30,0.4)] lg:rounded-3xl rounded-2xl h-[50%] sm:h-[70%] xl:h-[80%] 2xl:h-[95%] w-full flex items-center justify-center ">
                 <img
                   className="w-[50%]"
                   src={desc.icon}

@@ -11,13 +11,13 @@ const Home = () => {
     <>
       <Header />
       <LandingPage />
-      <div className=" hidden md:block absolute rounded-[26px] h-[200px] w-[320px]  top-[80%] left-20 -rotate-6 shadow-2xl shadow-blackTransparent">
+      <div className=" hidden md:block absolute rounded-[35px] h-[200px] w-[320px]  top-[80%] left-20 -rotate-6 shadow-2xl shadow-blackTransparent">
         <img className="rounded-[35px]" src="./screen-shot-site/lurex.netlify.app_(Nest Hub Max).png" alt="img site" />
       </div>
       <div className="absolute rounded-[35px] h-[200px] w-[300px]  top-[75%] md:top-[85%]  right-1/3 md:right-20 rotate-12 shadow-2xl shadow-blackTransparent">
         <img className="rounded-[35px] w-full h-full" src="./screen-shot-site/app-banque.netlify.app_(Nest Hub Max).png" alt="img site" />
       </div>
-      <div className="h-full pt-10 flex items-center justify-center bg-grayLight z-10 ">
+      <div className="h-full max-w-[1600px] m-auto pt-10 flex items-center justify-center bg-grayLight z-10 ">
         <video
           className="w-[95%] aspect-video rounded-3xl z-10"
           autoPlay

@@ -5,6 +5,9 @@
   scroll-behavior: smooth;
   
 }
+body{
+  background: #535A64;
+}
 
 
 @tailwind base;

@@ -10,8 +10,8 @@ export default {
         green: "#DCFFBA",
         white: "#FFFFFF",
         blackTransparent: "#20000074",
-        blackGradient: "#2f2f33",
-        whiteGray: "#B2B6BB",
+        blackGradient: "#383840",
+        whiteGray: "#CDCFD3",
       },
       gridTemplateColumns: {
         "30/70": "35% 65%",

@@ -10,8 +10,9 @@ const Offers = () => {
   };
 
   return (
-    <div
-      className="flex items-center justify-center flex-col pt-36 h-full bg-grayDark gap-6 pl-5 sm:pl-20 sm:pr-20 pr-5 md:pr-0 md:pl-0 shadow-offer_shadow"
+    <div className="bg-grayDark shadow-offer_shadow">
+      <div
+      className="flex items-center justify-center flex-col pb-32 pt-36 h-full bg-grayDark gap-6 pl-5 sm:pl-20 sm:pr-20 pr-5 md:pr-0 md:pl-0  max-w-[1500px] m-auto"
       id="offre"
     >
       <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
@@ -84,6 +85,7 @@ const Offers = () => {
           </SplideSlide>
         ))}
       </Splide>
+    </div>
     </div>
   );
 };

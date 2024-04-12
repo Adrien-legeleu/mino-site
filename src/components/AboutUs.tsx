@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 const AboutUs = () => {
   return (
-    <div className="lg:grid lg:grid-cols-30/70 bg-grayLight pt-40 pl-2 pr-2 md:pl-8 md:pr-8 lg:pr-16 flex flex-col ">
+    <div className="lg:grid lg:grid-cols-30/70 bg-grayLight pt-40 pl-2 pr-2 md:pl-8 md:pr-8 lg:pr-16 flex flex-col max-w-[1700px] m-auto">
       <div className="flex flex-row items-start justify-start ">
         <div className="w-10 h-0.5 bg-white mr-3 relative top-2.5"></div>
         <h3 className="text-white">Pourquoi-nous ?</h3>
@@ -22,7 +22,7 @@ const AboutUs = () => {
               >
                 <div className="text-whiteGray flex flex-col justify-between p-10  h-full z-10">
                   <h4 className="text-2xl">{card.title}</h4>
-                  <p className="text-sm xl:text text-shadow-sm pr-20">
+                  <p className="text-sm xl:text  pr-20">
                     {card.text}
                   </p>
                 </div>

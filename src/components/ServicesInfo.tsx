@@ -14,18 +14,18 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
     return(
         <div  >
             <div
-        className={`fixed md:rounded-t-[60px] rounded-t-[30px]  w-[100%] pt-4 h-[100%] bottom-0  bg-grayDark shadow-containerService left-0 flex flex-col  duration-300 ease-out z-[100] ${
+        className={`fixed md:rounded-t-[60px] rounded-t-[30px]   w-[100%] pt-4 h-[100%] bottom-0  bg-grayDark shadow-containerService left-0 flex flex-col  duration-300 ease-out z-[100] ${
           isInfoContainerVisible
             ? "transform translate-none visible"
             : "transform translate-y-full invisible"
         }`}
       >
-        <ul className="  pl-5 p-5  items-center justify-center gap-2 m-auto bg-[#393d44] rounded-full hidden md:flex">
+        <ul className="  pl-5 p-5  items-center justify-center gap-4 m-auto bg-[#393d44] rounded-full hidden md:flex">
             <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
           {infoContainerServices.map((info, index) => (
             <a href={`#${info.id}`}>
               <li key={`numéro : ${index}`}>
-                <button className="text-sm text-center lg:text-lg pl-5 pr-5 pb-3 pt-3 bg-green rounded-full hover:scale-[1.03] duration-100">{info.title}</button>
+                <button className="text-sm text-center lg:text-md xl:text-lg pl-5 pr-5 pb-3 pt-3 bg-green rounded-full hover:scale-[1.03] duration-100">{info.title}</button>
               </li>
             </a>
           ))}
@@ -34,18 +34,18 @@ const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoCo
             className=" cursor-pointer absolute top-6 right-2  md:top-4 md:right-10"
             onClick={closeContainerVisible}
           >
-            <div className="w-8 md:w-12 p-[6px] md:p-3 rounded-full bg-[rgb(230,230,230)] hover:scale-110 duration-300 cursor-pointer">
+            <div className="w-8 md:w-12  rounded-full hover:scale-110 duration-300 cursor-pointer">
                 <img className="w-full" src="./icon/close-white.png" alt="close" />
             </div>
           </div>
         <div
-          className="w-full pr-5 pl-5 sm:p-0 overflow-y-auto max-w-[800px] m-auto"
+          className="w-full pr-5 pl-5 sm:p-0 overflow-y-auto max-w-[700px] m-auto"
           style={{ scrollbarWidth: "none" }}
         >
           {infoContainerServices.map((info, index) => (
             <div
               className={`pl-7 pr-7 pt-20 pb-16 flex flex-col items-center justify-center ${
-                index !== infoContainerServices.length - 1 ? "border-b-2" : ""
+                index !== infoContainerServices.length - 1 ? "border-b-2 border-whiteGray" : ""
               }`}
               key={`infos-${index}`}
               id={info.id}
