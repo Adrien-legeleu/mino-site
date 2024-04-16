@@ -1,13 +1,13 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { useState } from "react";
-import "@splidejs/react-splide/css";
+// import { Splide, SplideSlide } from "@splidejs/react-splide";
+// import { useState } from "react";
+// import "@splidejs/react-splide/css";
 const Offers = () => {
-  const [isListeAll, setIsListeAll] = useState(false);
+  // const [isListeAll, setIsListeAll] = useState(false);
 
-  const lenghtListe = isListeAll ? listes : listes.slice(0, 4);
-  const handleIsVisibleAllListe = () => {
-    setIsListeAll(!isListeAll);
-  };
+  // const lenghtListe = isListeAll ? listes : listes.slice(0, 4);
+  // const handleIsVisibleAllListe = () => {
+  //   setIsListeAll(!isListeAll);
+  // };
 
   return (
     <div className="bg-grayDark shadow-offer_shadow">
@@ -15,7 +15,10 @@ const Offers = () => {
       className="flex items-center justify-center flex-col pb-32 pt-36 h-full bg-grayDark gap-6 pl-5 sm:pl-20 sm:pr-20 pr-5 md:pr-0 md:pl-0  max-w-[1500px] m-auto"
       id="offre"
     >
-      <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
+      <h2 className="text-white text-xl text-center">La page des offres est en cours de fabrication  , revenez plus tard 😊
+        
+      </h2>
+      {/* <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
       <Splide
         options={{
           perPage:
@@ -84,7 +87,7 @@ const Offers = () => {
             </div>
           </SplideSlide>
         ))}
-      </Splide>
+      </Splide> */}
     </div>
     </div>
   );
@@ -92,135 +95,135 @@ const Offers = () => {
 
 export default Offers;
 
-const offers = [
-  {
-    title: "basic",
-    description:
-      "Offre la plus basique pour ceux qui ont besoin d'un site simple d'une seule page  mais désigner",
-    features: [
-      true,
-      true,
-      true,
-      true,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ],
-    color: "linear-gradient(194deg, #aee4ee 0%, #71a0d6 100%)",
-  },
-  {
-    title: "avancé",
-    description:
-      "Une option plus avancée pour ceux qui ont besoin de fonctionnalités supplémentaires et d'un site web plus complexe.",
-    features: [
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ],
-    color: " linear-gradient(194deg, #bef577 0%, #609ee4 100%)",
-  },
-  {
-    title: "pro",
-    description:
-      "Pour les entreprises sérieuses qui ont besoin d'une présence en ligne professionnelle avec des fonctionnalités avancées.",
-    features: [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      false,
-      false,
-      false,
-    ],
-    color: "linear-gradient(194deg, #228cee 0%, #4c82c0 100%)",
-  },
-  {
-    title: "ultra",
-    description:
-      "Pour les entreprises haut de gamme qui exigent le meilleur en matière de présence en ligne et de fonctionnalités.",
-    features: [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-    ],
-    color: "linear-gradient(194deg, #1855da 0%, #2077db 100%)",
-  },
-];
+// const offers = [
+//   {
+//     title: "basic",
+//     description:
+//       "Offre la plus basique pour ceux qui ont besoin d'un site simple d'une seule page  mais désigner",
+//     features: [
+//       true,
+//       true,
+//       true,
+//       true,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//     ],
+//     color: "linear-gradient(194deg, #aee4ee 0%, #71a0d6 100%)",
+//   },
+//   {
+//     title: "avancé",
+//     description:
+//       "Une option plus avancée pour ceux qui ont besoin de fonctionnalités supplémentaires et d'un site web plus complexe.",
+//     features: [
+//       true,
+//       true,
+//       true,
+//       true,
+//       false,
+//       true,
+//       true,
+//       true,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//       false,
+//     ],
+//     color: " linear-gradient(194deg, #bef577 0%, #609ee4 100%)",
+//   },
+//   {
+//     title: "pro",
+//     description:
+//       "Pour les entreprises sérieuses qui ont besoin d'une présence en ligne professionnelle avec des fonctionnalités avancées.",
+//     features: [
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       false,
+//       false,
+//       false,
+//       false,
+//     ],
+//     color: "linear-gradient(194deg, #228cee 0%, #4c82c0 100%)",
+//   },
+//   {
+//     title: "ultra",
+//     description:
+//       "Pour les entreprises haut de gamme qui exigent le meilleur en matière de présence en ligne et de fonctionnalités.",
+//     features: [
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//       true,
+//     ],
+//     color: "linear-gradient(194deg, #1855da 0%, #2077db 100%)",
+//   },
+// ];
 
-const listePage = [
-  {
-    desc: "site web 1 page",
-  },
-  {
-    desc: "site web 3 pages",
-  },
-  {
-    desc: "site web 5 pages",
-  },
-  {
-    desc: "site web 15 pages",
-  },
-];
+// const listePage = [
+//   {
+//     desc: "site web 1 page",
+//   },
+//   {
+//     desc: "site web 3 pages",
+//   },
+//   {
+//     desc: "site web 5 pages",
+//   },
+//   {
+//     desc: "site web 15 pages",
+//   },
+// ];
 
-const listes = [
-  "Hébergement inclus",
-  "maintenance du site mensuel",
-  "Domaine personnalisé non inclus",
-  "Support par e-mail uniquement",
-  "Nom de domaine personnalisé inclus",
-  "Support par e-mail et téléphone",
-  "Moyen de contact (formulaire , envoi d'e-mail)",
-  "maintenance du site régulière",
-  "Support par e-mail, téléphone et chat en direct",
-  "Optimisation pour les moteurs de recherche (SEO)",
-  "Hébergement haut de gamme avec sauvegardes régulières",
-  "Nom de domaine personnalisé inclus",
-  "Support prioritaire 24/7",
-  "Optimisation pour les moteurs de recherche (SEO) avancée",
-  "E-commerce intégré avec des options de paiement sécurisées",
-  "Analyse du site et rapports de performance réguliers",
-];
+// const listes = [
+//   "Hébergement inclus",
+//   "maintenance du site mensuel",
+//   "Domaine personnalisé non inclus",
+//   "Support par e-mail uniquement",
+//   "Nom de domaine personnalisé inclus",
+//   "Support par e-mail et téléphone",
+//   "Moyen de contact (formulaire , envoi d'e-mail)",
+//   "maintenance du site régulière",
+//   "Support par e-mail, téléphone et chat en direct",
+//   "Optimisation pour les moteurs de recherche (SEO)",
+//   "Hébergement haut de gamme avec sauvegardes régulières",
+//   "Nom de domaine personnalisé inclus",
+//   "Support prioritaire 24/7",
+//   "Optimisation pour les moteurs de recherche (SEO) avancée",
+//   "E-commerce intégré avec des options de paiement sécurisées",
+//   "Analyse du site et rapports de performance réguliers",
+// ];

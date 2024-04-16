@@ -1,3 +1,7 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
+
 interface FormProps {
   isVisibleForm: boolean;
   setIsVisibleForm: React.Dispatch<React.SetStateAction<boolean>>;
@@ -9,13 +13,35 @@ interface FormProps {
   };
 }
 
-const Form: React.FC<FormProps> = ({
-  isVisibleForm,
-  setIsVisibleForm,
-  desc,
-}) => {
+const Form: React.FC<FormProps> = ({ isVisibleForm, setIsVisibleForm, desc }) => {
+  const form = useRef<HTMLFormElement>(null);
+
   const closeForm = () => {
     setIsVisibleForm(false);
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(form.current);
+    
+    if (form.current) { 
+      emailjs
+        .sendForm("service_08oha6h", "template_j18fecr", form.current, {
+          publicKey: 'q9xLxhpboGXB8QwLA',
+        })
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            toast.success("Email envoyé !");
+          },
+          (error:any) => {
+            console.log('FAILED...', error.text);
+            toast.error("Aie , réessayer!");
+          },
+        );
+    } else {
+      console.error("La référence form.current est undefined.");
+    }
   };
 
   return (
@@ -53,10 +79,12 @@ const Form: React.FC<FormProps> = ({
           <div>
             <p className="text-end text-white">* champs obligatoires</p>
           </div>
-          <form className="mt-16 flex flex-col gap-8">
+          <form className="mt-16 flex flex-col gap-8" ref={form}  onSubmit={(e)=>sendEmail(e)}>
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="text"
+                name='firstname'
+                required
                 placeholder="Standard"
                 className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
               />
@@ -67,6 +95,7 @@ const Form: React.FC<FormProps> = ({
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="text"
+                name='name'
                 placeholder="Standard"
                 className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
               />
@@ -78,6 +107,7 @@ const Form: React.FC<FormProps> = ({
               <input
                 type="text"
                 placeholder="Standard"
+                name='society'
                 className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
               />
               <label className="after:content[''] pointer-events-none absolute left-0  -top-1.5 flex h-full w-full select-none !overflow-visible truncate text-[11px] font-normal leading-tight text-gray-500 transition-all after:absolute after:-bottom-1.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-gray-500 after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-white duration-300 ease-in-out">
@@ -88,6 +118,7 @@ const Form: React.FC<FormProps> = ({
               <input
                 type="email"
                 required
+                name='email'
                 autoComplete="email"
                 placeholder="Standard"
                 className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
@@ -99,6 +130,8 @@ const Form: React.FC<FormProps> = ({
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="tel"
+                required
+                name='tel'
                 autoComplete="tel"
                 placeholder="Standard"
                 className="peer h-full w-full border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGra focus:border-gray-500 focus:outline-0 disabled:border-0 disabled:bg-whiteGray placeholder:opacity-0 focus:placeholder:opacity-100"
@@ -110,7 +143,9 @@ const Form: React.FC<FormProps> = ({
             <div className="relative w-full min-w-[200px]">
               <textarea
                 className="peer h-full min-h-[80px] w-full resize-none border-b border-whiteGray bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border-whiteGray focus:border-grayWhite focus:outline-0 disabled:resize-none disabled:border-0 disabled:bg-whiteGray"
-                placeholder=" "
+                placeholder=""
+                required
+                name='message'
               ></textarea>
               <label className="after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2  after:block after:w-full after:scale-x-0 after:border-b-2  after:transition-transform after:duration-300 peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.25] peer-placeholder-shown:text-whiteGray peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-green peer-focus:after:scale-x-100 peer-focus:after:border-green peer-focus:after:rounded-full peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-whiteGray duration-300 ease-in-out">
                 Message
