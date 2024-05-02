@@ -18,20 +18,20 @@ const AboutUs = () => {
             {Cards.map((card, index) => (
               <div
                 key={index}
-                className="relative flex bg-gradient-to-br from-grayDark from-65% to-blackGradient to-100% hover:from-50% rounded-3xl h-[300px] shadow-card ease-out duration-300 group"
+                className="grid grid-cols-30/70 bg-grayDark rounded-3xl h-[200px] items-center sease-out duration-300 group relative"
               >
-                <div className="text-whiteGray flex flex-col justify-between p-10  h-full z-10">
-                  <h4 className="text-2xl">{card.title}</h4>
-                  <p className="text-sm xl:text  pr-20">
-                    {card.text}
-                  </p>
-                </div>
-                <div className="flex items-center justify-center  min-w-[200px] h-[200px] top-1/2 -translate-y-1/2 relative right-10">
+                <div className=" bg-[rgba(30,30,30,0.4)]   lg:rounded-3xl rounded-2xl h-[50%]  sm:h-[70%] xl:h-[60%] 2xl:h-[80%] w-1/2 flex items-center justify-center relative m-auto">
                   <img
-                    className="duration-300 ease-out w-[100%] h-[100%] object-contain"
+                    className="duration-300 ease-out w-[50%]  object-contain"
                     src={card.img}
                     alt={card.title}
                   />
+                </div>
+                <div className=" flex flex-col justify-between pb-10  pt-10 h-full">
+                  <h4 className="text-white text-2xl">{card.title}</h4>
+                  <p className="text-whiteGray text-sm xl:text  pr-20">
+                    {card.text}
+                  </p>
                 </div>
               </div>
             ))}
@@ -55,7 +55,9 @@ const AboutUs = () => {
                 >
                   <div className="text-whiteGray flex flex-col justify-between p-5 pb-7   h-full">
                     <h4 className="sm:text-xl text-md ">{card.title}</h4>
-                    <p className="text-[0.7rem] sm:text-[0.75rem]">{card.text}</p>
+                    <p className="text-[0.7rem] sm:text-[0.75rem]">
+                      {card.text}
+                    </p>
                   </div>
                   <div className=" flex items-center justify-center absolute w-[65px] h-[65px] top-2 right-2">
                     <img
@@ -79,24 +81,24 @@ const Cards = [
     id: "1",
     title: "Conseil",
     text: "Écouter pour comprendre votre métier, vos objectifs, votre écosystème. C'est une étape indispensable pour être en mesure de proposer des solutions adéquates.",
-    img: "./image-3d/conseil.png",
+    img: "./icon/operateur.png",
   },
   {
     id: "2",
     title: "Conception Digitale Axée Utilisateur",
     text: "Nous mettons les utilisateurs au centre de nos solutions digitales. Notre objectif : simplicité et facilité d'utilisation. Nos interfaces sont intuitives et performantes pour une expérience utilisateur agréable.",
-    img: "./image-3d/design.png",
+    img: "./icon/conception-graphique.png",
   },
   {
     id: "3",
     title: "Choix technologiques",
     text: "Notre approche est pragmatique : nous sélectionnons les technologies les plus appropriées et les plus performantes aux besoins des projets et travaillons toujours sur-mesure.",
-    img: "./image-3d/techno.png",
+    img: "./icon/creation-de-sites-web.png",
   },
   {
     id: "4",
     title: "Hébergement & maintenance",
     text: "Nous gérons votre hébergement, couvrant le choix du cloud ou d'un serveur dédié, la sécurité, les réglementations et le budget. En cas de problème, notre équipe intervient rapidement pour assurer le bon fonctionnement.",
-    img: "./image-3d/hébergement.png",
+    img: "./icon/hebergement-web.png",
   },
 ];
