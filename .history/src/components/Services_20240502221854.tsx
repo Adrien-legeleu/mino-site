@@ -104,7 +104,7 @@ const servicesData = [
   {
     href: "#1",
     title: "Blog",
-    src: "./template/music.jpg",
+    src: "./template/glace.jpg",
   },
   {
     href: "#2",
@@ -114,12 +114,12 @@ const servicesData = [
   {
     href: "#3",
     title: "Site d'hébergement",
-    src: "./template/hebergement.jpg",
+    src: "./template/glace.jpg",
   },
   {
     href: "#4",
     title: "E-commerce",
-    src: "./template/sushi.jpg",
+    src: "./template/glace.jpg",
   },
   {
     href: "#1",

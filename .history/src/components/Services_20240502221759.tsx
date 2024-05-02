@@ -103,27 +103,27 @@ const servicesInfos = [
 const servicesData = [
   {
     href: "#1",
-    title: "Blog",
-    src: "./template/music.jpg",
-  },
-  {
-    href: "#2",
     title: "Site Vitrine",
     src: "./template/glace.jpg",
   },
   {
+    href: "#2",
+    title: "Site e-commerce",
+    src: "./template/glace.jpg",
+  },
+  {
     href: "#3",
-    title: "Site d'hébergement",
-    src: "./template/hebergement.jpg",
+    title: "Site Vitrine",
+    src: "./template/glace.jpg",
   },
   {
     href: "#4",
-    title: "E-commerce",
-    src: "./template/sushi.jpg",
+    title: "Site Vitrine",
+    src: "./template/glace.jpg",
   },
   {
     href: "#1",
-    title: "Portfolio",
+    title: "Site Vitrine",
     src: "./template/glace.jpg",
   },
 ];

@@ -32,45 +32,43 @@ const Services = () => {
           ))}
         </div>
         <div
-          className="relative grid-cols-1  grid  w-[80%] m-auto"
+          className="relative grid-cols-1  grid  gap-4 w-[80%] m-auto"
           id="service"
         >
           {servicesData.map((data, index) => {
             return (
-              <a href={data.href}>
-                <div
-                  className="grid grid-cols-95/5 gap-2  h-48 w-full pl-8 pr-5 bg-grayDark justify-center rounded-3xl group relative mb-4"
-                  key={`service numéro : ${index}`}
-                >
-                  <div className="bg-[rgb(95,103,114)] opacity-0 rounded-3xl w-full h-full absolute top-0 left-0 group-hover:opacity-100 duration-300 ease-in-out "></div>
-                  <div className="grid grid-cols-60/40 gap-4 md:gap-8 group-hover:translate-x-5 duration-500 ease-in-out items-center">
-                    <div className="h-[80%] w-[90%] flex items-center justify-center ">
-                      <img
-                        className="w-[100%] h-full lg:rounded-3xl rounded-2xl"
-                        src={data.src}
-                        alt={`icon : ${index}`}
-                      />
-                    </div>
-                    <div className="flex">
-                      <p className="text-whiteGray text-md sm:text-xl md:text-3xl ">
-                        {data.title}
-                      </p>
-                    </div>
+              <div
+                className="grid grid-cols-95/5 gap-2  h-48 w-full pl-8 pr-5 bg-grayDark justify-center rounded-3xl group relative mb-4"
+                key={`service numéro : ${index}`}
+              >
+                <div className="bg-[rgb(95,103,114)] opacity-0 rounded-3xl w-full h-full absolute top-0 left-0 group-hover:opacity-100 duration-300 ease-in-out "></div>
+                <div className="grid grid-cols-60/40 gap-4 md:gap-8 group-hover:translate-x-5 duration-500 ease-in-out items-center">
+                  <div className="h-[80%] w-[90%] flex items-center justify-center ">
+                    <img
+                      className="w-[100%] h-full lg:rounded-3xl rounded-2xl"
+                      src={data.src}
+                      alt={`icon : ${index}`}
+                    />
                   </div>
-                  <div className="flex items-center justify-end z-10">
-                    <button
-                      className="bg-green pt-3 pb-3 pr-5 pl-5 rounded-full lg:opacity-0 lg:translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 duration-500 ease-in-out hover:brightness-90 hover:scale-110 "
-                      onClick={OpenContainerVisible}
-                    >
-                      <img
-                        className="w-4"
-                        src="./icon/right-arrow.png"
-                        alt="right arrow"
-                      />
-                    </button>
+                  <div className="flex">
+                    <p className="text-whiteGray text-md sm:text-xl md:text-3xl ">
+                      {data.title}
+                    </p>
                   </div>
                 </div>
-              </a>
+                <div className="flex items-center justify-end z-10">
+                  <button
+                    className="bg-green pt-3 pb-3 pr-5 pl-5 rounded-full lg:opacity-0 lg:translate-y-12 group-hover:opacity-100 group-hover:translate-y-0 duration-500 ease-in-out hover:brightness-90 hover:scale-110 "
+                    onClick={OpenContainerVisible}
+                  >
+                    <img
+                      className="w-4"
+                      src="./icon/right-arrow.png"
+                      alt="right arrow"
+                    />
+                  </button>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -103,27 +101,27 @@ const servicesInfos = [
 const servicesData = [
   {
     href: "#1",
-    title: "Blog",
-    src: "./template/music.jpg",
-  },
-  {
-    href: "#2",
     title: "Site Vitrine",
     src: "./template/glace.jpg",
   },
   {
-    href: "#3",
-    title: "Site d'hébergement",
-    src: "./template/hebergement.jpg",
-  },
-  {
-    href: "#4",
-    title: "E-commerce",
-    src: "./template/sushi.jpg",
+    href: "#1",
+    title: "Site Vitrine",
+    src: "./template/glace.jpg",
   },
   {
     href: "#1",
-    title: "Portfolio",
+    title: "Site Vitrine",
+    src: "./template/glace.jpg",
+  },
+  {
+    href: "#1",
+    title: "Site Vitrine",
+    src: "./template/glace.jpg",
+  },
+  {
+    href: "#1",
+    title: "Site Vitrine",
     src: "./template/glace.jpg",
   },
 ];
