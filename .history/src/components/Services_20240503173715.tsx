@@ -20,7 +20,7 @@ const Services = () => {
     ScrollTrigger.create({
       trigger: servicesRef.current, // Utilisation de la référence
       start: "top top",
-      end: "bottom bottom-=30%",
+      end: "bottom bottom",
       pin: leftRef.current,
     });
   }, []);
@@ -33,8 +33,8 @@ const Services = () => {
         ref={servicesRef}
       >
         <div
-          className="hidden bg-grayDark rounded-3xl  h-screen lg:flex lg:flex-col w-[40%] items-center scale-90 translate-x-1/2"
-          ref={leftRef}
+          className="hidden bg-grayDark rounded-3xl  h-screen lg:flex lg:flex-col w-[40%] items-center scale-90 mx-auto"
+          // ref={leftRef}
         >
           {servicesInfos.map((serviceInfo, index) => (
             <div

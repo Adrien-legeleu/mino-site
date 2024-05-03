@@ -64,7 +64,7 @@ const ServiceInfo: React.FC<ServiceProps> = ({
                 {info.text}
               </p>
               <Link to="/realisations" onClick={scrollToTop}>
-                <button className="p-5 text-white  rounded-full ease-out duration-300 hover:scale-110">
+                <button className="p-5 text-white bg-grayLight rounded-full ease-out duration-300 hover:scale-110">
                   voir nos réalisations
                 </button>
               </Link>

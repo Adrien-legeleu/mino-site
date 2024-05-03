@@ -15,6 +15,9 @@ const Offers = () => {
         className="flex items-center justify-center flex-col pb-32 pt-36 h-full bg-grayLight gap-6 pl-5 sm:pl-20 sm:pr-20 pr-5 md:pr-0 md:pl-0  max-w-[1500px] m-auto"
         id="offre"
       >
+        <h2 className="text-white text-xl text-center">
+          La page des offres est en cours de fabrication , revenez plus tard 😊
+        </h2>
         <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
         <Splide
           options={{
@@ -29,17 +32,12 @@ const Offers = () => {
             <SplideSlide key={index}>
               <div
                 className={`flex flex-col gap-6 mb-20 group relative ${
-                  index === 3 ? "bg-[rgb(95,103,114)]" : "bg-[rgb(110,117,128)]"
+                  index === 3 ? "bg-[rgb(39,41,44)]" : "bg-grayDark"
                 } lg:rounded-3xl md:rounded-2xl rounded-xl px-6 py-8 ${
                   !isListeAll ? "h-[500px]" : "h-full"
                 } overflow-x-hidden cursor-pointer `}
               >
-                {index === 1 && (
-                  <span className="  bg-[rgb(187,247,208)] text-[rgb(34,197,94)] text-xs  me-2 px-2.5 py-0.5 rounded   border border-[rgb(22,101,52)] absolute top-5 right-5">
-                    Gratuit
-                  </span>
-                )}
-                <h2 className="text-black capitalize text-center text-4xl">
+                <h2 className="text-white text-center text-4xl">
                   {offer.title}
                 </h2>
                 <p className="text-black text-center">{offer.description}</p>
@@ -90,9 +88,6 @@ const Offers = () => {
                       Réservez
                     </button>
                   </div>
-                </div>
-                <div>
-                  <span>39 $</span>
                 </div>
               </div>
             </SplideSlide>

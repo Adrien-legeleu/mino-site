@@ -15,6 +15,9 @@ const Offers = () => {
         className="flex items-center justify-center flex-col pb-32 pt-36 h-full bg-grayLight gap-6 pl-5 sm:pl-20 sm:pr-20 pr-5 md:pr-0 md:pl-0  max-w-[1500px] m-auto"
         id="offre"
       >
+        <h2 className="text-white text-xl text-center">
+          La page des offres est en cours de fabrication , revenez plus tard 😊
+        </h2>
         <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
         <Splide
           options={{
@@ -90,9 +93,6 @@ const Offers = () => {
                       Réservez
                     </button>
                   </div>
-                </div>
-                <div>
-                  <span>39 $</span>
                 </div>
               </div>
             </SplideSlide>

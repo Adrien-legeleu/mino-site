@@ -91,9 +91,6 @@ const Offers = () => {
                     </button>
                   </div>
                 </div>
-                <div>
-                  <span>39 $</span>
-                </div>
               </div>
             </SplideSlide>
           ))}

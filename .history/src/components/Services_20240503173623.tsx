@@ -15,15 +15,15 @@ const Services = () => {
     setIsInfoContainerVisible(true);
   };
 
-  useEffect(() => {
-    // Configuration du ScrollTrigger
-    ScrollTrigger.create({
-      trigger: servicesRef.current, // Utilisation de la référence
-      start: "top top",
-      end: "bottom bottom-=30%",
-      pin: leftRef.current,
-    });
-  }, []);
+  // useEffect(() => {
+  //   // Configuration du ScrollTrigger
+  //   ScrollTrigger.create({
+  //     trigger: servicesRef.current, // Utilisation de la référence
+  //     start: "top top",
+  //     end: "bottom bottom",
+  //     pin: leftRef.current,
+  //   });
+  // }, []);
 
   return (
     <div className="h-full w-full bg-grayLight pt-48 pb-48 max-w-[1700px] m-auto ">
@@ -33,8 +33,8 @@ const Services = () => {
         ref={servicesRef}
       >
         <div
-          className="hidden bg-grayDark rounded-3xl  h-screen lg:flex lg:flex-col w-[40%] items-center scale-90 translate-x-1/2"
-          ref={leftRef}
+          className="hidden bg-grayDark rounded-3xl  h-screen lg:flex lg:flex-col w-[40%] items-center"
+          // ref={leftRef}
         >
           {servicesInfos.map((serviceInfo, index) => (
             <div

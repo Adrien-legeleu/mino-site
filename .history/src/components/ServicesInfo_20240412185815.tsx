@@ -1,22 +1,19 @@
 import { Link } from "react-router-dom";
 
 interface ServiceProps {
-  setIsInfoContainerVisible: React.Dispatch<React.SetStateAction<boolean>>;
-  isInfoContainerVisible: boolean;
+    setIsInfoContainerVisible: React.Dispatch<React.SetStateAction<boolean>>,
+    isInfoContainerVisible:boolean
 }
-const ServiceInfo: React.FC<ServiceProps> = ({
-  setIsInfoContainerVisible,
-  isInfoContainerVisible,
-}) => {
-  const closeContainerVisible = () => {
+const ServiceInfo:React.FC<ServiceProps> =({setIsInfoContainerVisible , isInfoContainerVisible})=>{
+      const closeContainerVisible = () => {
     setIsInfoContainerVisible(false);
   };
-  const scrollToTop = () => {
+  const scrollToTop=()=>{
     window.scrollTo(0, 0);
-  };
-  return (
-    <div>
-      <div
+  }
+    return(
+        <div  >
+            <div
         className={`fixed md:rounded-t-[60px] rounded-t-[30px]   w-[100%] pt-4 h-[100%] bottom-0  bg-grayDark shadow-containerService left-0 flex flex-col  duration-300 ease-out z-[100] ${
           isInfoContainerVisible
             ? "transform translate-none visible"
@@ -24,25 +21,23 @@ const ServiceInfo: React.FC<ServiceProps> = ({
         }`}
       >
         <ul className="  pl-5 p-5  items-center justify-center gap-4 m-auto bg-[#393d44] rounded-full hidden md:flex">
-          <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
+            <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
           {infoContainerServices.map((info, index) => (
             <a href={`#${info.id}`}>
               <li key={`numéro : ${index}`}>
-                <button className="text-sm text-center lg:text-md xl:text-lg pl-5 pr-5 pb-3 pt-3 bg-green rounded-full hover:scale-[1.03] duration-100">
-                  {info.title}
-                </button>
+                <button className="text-sm text-center lg:text-md xl:text-lg pl-5 pr-5 pb-3 pt-3 bg-green rounded-full hover:scale-[1.03] duration-100">{info.title}</button>
               </li>
             </a>
           ))}
         </ul>
-        <div
-          className=" cursor-pointer absolute top-6 right-2  md:top-4 md:right-10"
-          onClick={closeContainerVisible}
-        >
-          <div className="w-8 md:w-12  rounded-full hover:scale-110 duration-300 cursor-pointer">
-            <img className="w-full" src="./icon/close-white.png" alt="close" />
+          <div
+            className=" cursor-pointer absolute top-6 right-2  md:top-4 md:right-10"
+            onClick={closeContainerVisible}
+          >
+            <div className="w-8 md:w-12  rounded-full hover:scale-110 duration-300 cursor-pointer">
+                <img className="w-full" src="./icon/close-white.png" alt="close" />
+            </div>
           </div>
-        </div>
         <div
           className="w-full pr-5 pl-5 sm:p-0 overflow-y-auto max-w-[700px] m-auto"
           style={{ scrollbarWidth: "none" }}
@@ -50,32 +45,26 @@ const ServiceInfo: React.FC<ServiceProps> = ({
           {infoContainerServices.map((info, index) => (
             <div
               className={`pl-7 pr-7 pt-20 pb-16 flex flex-col items-center justify-center ${
-                index !== infoContainerServices.length - 1
-                  ? "border-b-2 border-whiteGray"
-                  : ""
+                index !== infoContainerServices.length - 1 ? "border-b-2 border-whiteGray" : ""
               }`}
               key={`infos-${index}`}
               id={info.id}
             >
-              <h3 className=" text-center text-2xl md:text-3xl text-white">
-                {info.title}
-              </h3>
-              <p className=" mb-10 mt-10 text-center text-[0.75rem] sm:text-sm lg:text-md lg:leading-8 leading-6 text-whiteGray">
-                {info.text}
-              </p>
-              <Link to="/realisations" onClick={scrollToTop}>
-                <button className="p-5 text-white  rounded-full ease-out duration-300 hover:scale-110">
-                  voir nos réalisations
-                </button>
+              <h3 className=" text-center text-2xl md:text-3xl text-white">{info.title}</h3>
+              <p className=" mb-10 mt-10 text-center text-[0.75rem] sm:text-sm lg:text-md lg:leading-8 leading-6 text-whiteGray">{info.text}</p>
+              <Link to="/realisations" onClick={scrollToTop} >
+              <button className="p-5 bg-green rounded-full ease-out duration-300 hover:scale-110">
+                voir nos réalisations
+              </button>
               </Link>
             </div>
           ))}
         </div>
       </div>
-    </div>
-  );
-};
-export default ServiceInfo;
+        </div>
+    )
+}
+export default ServiceInfo
 
 const infoContainerServices = [
   {
@@ -96,11 +85,6 @@ const infoContainerServices = [
   {
     id: "4",
     title: "Site E-commerce",
-    text: "Transformez votre entreprise en ligne avec un site e-commerce sur mesure. Nous concevons des boutiques en ligne attractives et conviviales qui maximisent les ventes et fidélisent les clients. Que vous vendiez des produits physiques ou numériques, nous vous aidons à créer une plateforme de commerce électronique qui répond à vos besoins spécifiques et à ceux de vos clients. Contactez-nous dès aujourd'hui pour démarrer votre voyage vers le succès en ligne.",
-  },
-  {
-    id: "5",
-    title: "Portfolio",
     text: "Transformez votre entreprise en ligne avec un site e-commerce sur mesure. Nous concevons des boutiques en ligne attractives et conviviales qui maximisent les ventes et fidélisent les clients. Que vous vendiez des produits physiques ou numériques, nous vous aidons à créer une plateforme de commerce électronique qui répond à vos besoins spécifiques et à ceux de vos clients. Contactez-nous dès aujourd'hui pour démarrer votre voyage vers le succès en ligne.",
   },
 ];

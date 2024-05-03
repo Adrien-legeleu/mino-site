@@ -20,7 +20,7 @@ const Services = () => {
     ScrollTrigger.create({
       trigger: servicesRef.current, // Utilisation de la référence
       start: "top top",
-      end: "bottom bottom-=30%",
+      end: "bottom bottom-=10%",
       pin: leftRef.current,
     });
   }, []);

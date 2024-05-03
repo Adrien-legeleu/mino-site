@@ -15,15 +15,15 @@ const Services = () => {
     setIsInfoContainerVisible(true);
   };
 
-  useEffect(() => {
-    // Configuration du ScrollTrigger
-    ScrollTrigger.create({
-      trigger: servicesRef.current, // Utilisation de la référence
-      start: "top top",
-      end: "bottom bottom-=30%",
-      pin: leftRef.current,
-    });
-  }, []);
+  // useEffect(() => {
+  //   // Configuration du ScrollTrigger
+  //   ScrollTrigger.create({
+  //     trigger: servicesRef.current, // Utilisation de la référence
+  //     start: "top top",
+  //     end: "bottom bottom",
+  //     pin: leftRef.current,
+  //   });
+  // }, []);
 
   return (
     <div className="h-full w-full bg-grayLight pt-48 pb-48 max-w-[1700px] m-auto ">
@@ -33,22 +33,22 @@ const Services = () => {
         ref={servicesRef}
       >
         <div
-          className="hidden bg-grayDark rounded-3xl  h-screen lg:flex lg:flex-col w-[40%] items-center scale-90 translate-x-1/2"
-          ref={leftRef}
+          className="hidden bg-grayDark rounded-3xl  h-screen lg:flex lg:flex-col w-[40%] items-center"
+          // ref={leftRef}
         >
           {servicesInfos.map((serviceInfo, index) => (
             <div
               key={`serviceInfo : ${index}`}
-              className="p-3 pb-4 pt-4  flex flex-col gap-5 justify-between h-full items-center"
+              className="p-5  flex flex-col gap-5 justify-between h-full items-center"
             >
-              <div className="bg-[rgba(30,30,30,0.4)] lg:rounded-3xl rounded-2xl w-[85%] flex items-center justify-center relative pt-5 pb-5 ">
+              <div className="bg-[rgba(30,30,30,0.4)] lg:rounded-3xl rounded-2xl w-full flex items-center justify-center relative  ">
                 <img
                   src={serviceInfo.img}
                   alt={serviceInfo.title}
-                  className={`w-[45%] object-contain relative`}
+                  className={`w-[55%] object-contain relative`}
                 />
               </div>
-              <h5 className="text-center text-whiteGray text md:text-xl">
+              <h5 className="text-center text-whiteGray text-xl md:text-2xl">
                 {serviceInfo.title}
               </h5>
             </div>

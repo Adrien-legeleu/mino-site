@@ -15,6 +15,9 @@ const Offers = () => {
         className="flex items-center justify-center flex-col pb-32 pt-36 h-full bg-grayLight gap-6 pl-5 sm:pl-20 sm:pr-20 pr-5 md:pr-0 md:pl-0  max-w-[1500px] m-auto"
         id="offre"
       >
+        <h2 className="text-white text-xl text-center">
+          La page des offres est en cours de fabrication , revenez plus tard 😊
+        </h2>
         <h2 className="text-white text-5xl text-center mb-12">Nos offres</h2>
         <Splide
           options={{
@@ -35,8 +38,8 @@ const Offers = () => {
                 } overflow-x-hidden cursor-pointer `}
               >
                 {index === 1 && (
-                  <span className="  bg-[rgb(187,247,208)] text-[rgb(34,197,94)] text-xs  me-2 px-2.5 py-0.5 rounded   border border-[rgb(22,101,52)] absolute top-5 right-5">
-                    Gratuit
+                  <span className="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400 absolute top-5 right-5">
+                    Green
                   </span>
                 )}
                 <h2 className="text-black capitalize text-center text-4xl">
@@ -90,9 +93,6 @@ const Offers = () => {
                       Réservez
                     </button>
                   </div>
-                </div>
-                <div>
-                  <span>39 $</span>
                 </div>
               </div>
             </SplideSlide>
