@@ -36,7 +36,6 @@ const Offers = () => {
                 } overflow-x-hidden cursor-pointer `}
               >
                 {index === 1 && <Banner text="gratuit" />}
-                {index === 2 && <Banner text="recommandé" />}
                 <h2 className="text-black capitalize text-center text-4xl">
                   {offer.title}
                 </h2>

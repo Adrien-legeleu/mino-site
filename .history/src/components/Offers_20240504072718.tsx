@@ -1,7 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useState } from "react";
 import "@splidejs/react-splide/css";
-import Banner from "../Shared/Banner";
 const Offers = () => {
   const [isListeAll, setIsListeAll] = useState(false);
 
@@ -31,12 +30,15 @@ const Offers = () => {
               <div
                 className={`flex flex-col gap-6 mb-20 group relative ${
                   index === 3 ? "bg-[rgb(95,103,114)]" : "bg-[rgb(110,117,128)]"
-                } lg:rounded-3xl md:rounded-2xl rounded-xl px-6 pt-8 ${
+                } lg:rounded-3xl md:rounded-2xl rounded-xl px-6 py-8 ${
                   !isListeAll ? "h-[500px]" : "h-full"
                 } overflow-x-hidden cursor-pointer `}
               >
-                {index === 1 && <Banner text="gratuit" />}
-                {index === 2 && <Banner text="recommandé" />}
+                {index === 1 && (
+                  <span className="  bg-[rgb(187,247,208)] text-[rgb(34,197,94)] text-xs  me-2 px-2.5 py-0.5 rounded   border border-[rgb(22,101,52)] absolute top-5 right-5">
+                    Gratuit
+                  </span>
+                )}
                 <h2 className="text-black capitalize text-center text-4xl">
                   {offer.title}
                 </h2>
@@ -89,19 +91,8 @@ const Offers = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex items-center justify-center gap-5">
-                  <span
-                    className={`text-center text-4xl inline-block ${
-                      index === 1 && "line-through"
-                    }`}
-                  >
-                    {offer.price} €{" "}
-                  </span>
-                  {index === 1 && (
-                    <span className="text-3xl text-green inline-block">
-                      Gratuit !
-                    </span>
-                  )}
+                <div className="flex items-center justify-center">
+                  <span className="text-center text-4xl">39 $</span>
                 </div>
               </div>
             </SplideSlide>
@@ -137,7 +128,7 @@ const offers = [
       false,
       false,
     ],
-    price: "19",
+    color: "linear-gradient(194deg, #aee4ee 0%, #71a0d6 100%)",
   },
   {
     title: "avancé",
@@ -161,7 +152,7 @@ const offers = [
       false,
       false,
     ],
-    price: "50",
+    color: " linear-gradient(194deg, #bef577 0%, #609ee4 100%)",
   },
   {
     title: "pro",
@@ -185,7 +176,7 @@ const offers = [
       false,
       false,
     ],
-    price: "69",
+    color: "linear-gradient(194deg, #228cee 0%, #4c82c0 100%)",
   },
   {
     title: "ultra",
@@ -209,7 +200,7 @@ const offers = [
       true,
       true,
     ],
-    price: "99",
+    color: "linear-gradient(194deg, #1855da 0%, #2077db 100%)",
   },
 ];
 

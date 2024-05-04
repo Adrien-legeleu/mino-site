@@ -1,7 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useState } from "react";
 import "@splidejs/react-splide/css";
-import Banner from "../Shared/Banner";
 const Offers = () => {
   const [isListeAll, setIsListeAll] = useState(false);
 
@@ -35,8 +34,11 @@ const Offers = () => {
                   !isListeAll ? "h-[500px]" : "h-full"
                 } overflow-x-hidden cursor-pointer `}
               >
-                {index === 1 && <Banner text="gratuit" />}
-                {index === 2 && <Banner text="recommandé" />}
+                {index === 1 && (
+                  <span className="  bg-[rgb(187,247,208)] text-[rgb(34,197,94)] text-xs  me-2 px-2.5 py-0.5 rounded   border border-[rgb(22,101,52)] absolute top-5 right-5">
+                    Gratuit
+                  </span>
+                )}
                 <h2 className="text-black capitalize text-center text-4xl">
                   {offer.title}
                 </h2>
@@ -89,19 +91,17 @@ const Offers = () => {
                     </button>
                   </div>
                 </div>
-                <div className="flex items-center justify-center gap-5">
+                <div className="flex items-center justify-center">
                   <span
-                    className={`text-center text-4xl inline-block ${
+                    className={`text-center text-4xl ${
                       index === 1 && "line-through"
                     }`}
                   >
                     {offer.price} €{" "}
+                    {index === 1 && (
+                      <span className="no-underline text-green">Gratuit</span>
+                    )}
                   </span>
-                  {index === 1 && (
-                    <span className="text-3xl text-green inline-block">
-                      Gratuit !
-                    </span>
-                  )}
                 </div>
               </div>
             </SplideSlide>
