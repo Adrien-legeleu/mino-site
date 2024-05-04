@@ -83,7 +83,6 @@ const contactText = [
     under_text2:
       "Écrivez-nous pour prendre contact, nous allons échanger sur votre besoin et le chiffrer.",
     icon: "./icon/file (1).png",
-    id: "1",
   },
   {
     text: "J'ai besoin de plus d'informations sur Mino.",
@@ -91,7 +90,6 @@ const contactText = [
     under_text2:
       "Posez-nous votre question , nous vous répondrons dans le plus de détails",
     icon: "./icon/info.png",
-    id: "2",
   },
   {
     text: "Votre agence m'intéresse et je souhaite postuler.",
@@ -99,6 +97,5 @@ const contactText = [
     under_text2:
       "Très bon choix, vous pouvez nous contacter directement ci-dessous.",
     icon: "./icon/user.png",
-    id: "3",
   },
 ];

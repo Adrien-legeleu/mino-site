@@ -11,20 +11,22 @@ interface FormProps {
     text2: string;
     under_text2: string;
     icon: string;
-    id: string;
   };
+  index: number;
 }
 
 const Form: React.FC<FormProps> = ({
   isVisibleForm,
   setIsVisibleForm,
   desc,
+  index,
 }) => {
   const form = useRef<HTMLFormElement>(null);
 
   const closeForm = () => {
     setIsVisibleForm(false);
   };
+  console.log(desc);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -82,7 +84,9 @@ const Form: React.FC<FormProps> = ({
             <img className="w-14" src={desc.icon} alt="icon" />
           </div>
           <div className=" mb-10 flex flex-col gap-4">
-            <p className="text-2xl text-white">{desc.text2}</p>
+            <p className="text-2xl text-white">
+              {desc.text2} {index}{" "}
+            </p>
             <p className="text-whiteGray">{desc.under_text2}</p>
           </div>
           <div>
@@ -116,7 +120,7 @@ const Form: React.FC<FormProps> = ({
                 Nom
               </label>
             </div>
-            {desc.id === "1" && <Select />}
+            {index === 1 && <Select />}
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="text"

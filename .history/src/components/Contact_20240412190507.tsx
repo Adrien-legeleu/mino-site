@@ -11,10 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className="bg-grayLight shadow-contact_shadow pt-48 flex flex-col lg:grid lg:grid-cols-30/70 pl-4 pr-4 md:pl-10 md:pr-10 pb-32 max-w-[1600px] m-auto"
-      id="contact"
-    >
+    <div className="bg-grayLight shadow-contact_shadow pt-48 flex flex-col lg:grid lg:grid-cols-30/70 pl-4 pr-4 md:pl-10 md:pr-10 pb-32 max-w-[1600px] m-auto" id="contact">
       <div className="flex items-start">
         <div className="flex gap-2 items-center">
           <div className="h-[1px] w-16 bg-white rounded-full"></div>
@@ -22,9 +19,7 @@ const Contact = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-green lg:text-6xl md:text-5xl sm:text-4xl text-3xl mt-16 lg:mt-0  mb-5">
-          Contactez-nous !
-        </h2>
+        <h2 className="text-green lg:text-6xl md:text-5xl sm:text-4xl text-3xl mt-16 lg:mt-0  mb-5">Contactez-nous !</h2>
         <p className="lg:text-5xl md:text-4xl sm:text-3xl text-2xl mb-16 text-white leading-tight">
           Nous sommes toujours en quête de nouveautés et de nouvelles
           rencontres.
@@ -44,9 +39,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex items-center ">
-                <p className="text-whiteGray text-md sm:text-xl md:text-3xl ">
-                  {desc.text}
-                </p>
+                <p className="text-whiteGray text-md sm:text-xl md:text-3xl ">{desc.text}</p>
               </div>
             </div>
             <div className="flex items-center justify-end z-10">
@@ -83,7 +76,6 @@ const contactText = [
     under_text2:
       "Écrivez-nous pour prendre contact, nous allons échanger sur votre besoin et le chiffrer.",
     icon: "./icon/file (1).png",
-    id: "1",
   },
   {
     text: "J'ai besoin de plus d'informations sur Mino.",
@@ -91,7 +83,6 @@ const contactText = [
     under_text2:
       "Posez-nous votre question , nous vous répondrons dans le plus de détails",
     icon: "./icon/info.png",
-    id: "2",
   },
   {
     text: "Votre agence m'intéresse et je souhaite postuler.",
@@ -99,6 +90,5 @@ const contactText = [
     under_text2:
       "Très bon choix, vous pouvez nous contacter directement ci-dessous.",
     icon: "./icon/user.png",
-    id: "3",
   },
 ];

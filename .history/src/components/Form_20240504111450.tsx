@@ -11,7 +11,6 @@ interface FormProps {
     text2: string;
     under_text2: string;
     icon: string;
-    id: string;
   };
 }
 
@@ -116,7 +115,7 @@ const Form: React.FC<FormProps> = ({
                 Nom
               </label>
             </div>
-            {desc.id === "1" && <Select />}
+            <Select />
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="text"
@@ -178,3 +177,31 @@ const Form: React.FC<FormProps> = ({
 };
 
 export default Form;
+
+const OptionsSelect = [
+  {
+    title: "Basic",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maxime iusto est nobis!",
+    price: "19",
+  },
+  {
+    title: "Advanced",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maxime iusto est nobis!",
+    price: "50",
+  },
+  {
+    title: "Pro",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maxime iusto est nobis!",
+    price: "69",
+  },
+  {
+    title: "Ultra",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maxime iusto est nobis!",
+    price: "99",
+  },
+  {
+    title: "Basic",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maxime iusto est nobis!",
+    price: "A voir",
+  },
+];

@@ -66,6 +66,7 @@ const Contact = () => {
                 setIsVisibleForm={setIsVisibleForm}
                 isVisibleForm={isVisibleForm}
                 desc={selectDesc}
+                index={index}
               />
             )}
           </div>

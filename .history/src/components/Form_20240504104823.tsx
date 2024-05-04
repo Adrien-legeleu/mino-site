@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-import Select from "../Shared/Select";
 
 interface FormProps {
   isVisibleForm: boolean;
@@ -11,7 +10,6 @@ interface FormProps {
     text2: string;
     under_text2: string;
     icon: string;
-    id: string;
   };
 }
 
@@ -116,7 +114,14 @@ const Form: React.FC<FormProps> = ({
                 Nom
               </label>
             </div>
-            {desc.id === "1" && <Select />}
+            <div className="relative h-11 w-full min-w-[200px]">
+              <select name="offre">
+                <option selected>choississez votre offre</option>
+                <option></option>
+                <option></option>
+                <option></option>
+              </select>
+            </div>
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="text"

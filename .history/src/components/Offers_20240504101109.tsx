@@ -85,7 +85,7 @@ const Offers = () => {
                     Voir plus
                   </p>
                   <div className="flex justify-center items-center">
-                    <Link to="/#contact">
+                    <Link to="/#conntact">
                       <button className="pt-3 pb-3 pl-5 pr-5 bg-green rounded-full">
                         Réservez
                       </button>

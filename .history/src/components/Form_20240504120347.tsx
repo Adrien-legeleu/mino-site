@@ -13,6 +13,7 @@ interface FormProps {
     icon: string;
     id: string;
   };
+  index: number;
 }
 
 const Form: React.FC<FormProps> = ({
@@ -25,6 +26,7 @@ const Form: React.FC<FormProps> = ({
   const closeForm = () => {
     setIsVisibleForm(false);
   };
+  console.log(desc);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -116,7 +118,7 @@ const Form: React.FC<FormProps> = ({
                 Nom
               </label>
             </div>
-            {desc.id === "1" && <Select />}
+            {id === "1" && <Select />}
             <div className="relative h-11 w-full min-w-[200px]">
               <input
                 type="text"

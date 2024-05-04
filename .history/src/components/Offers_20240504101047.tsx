@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useState } from "react";
 import "@splidejs/react-splide/css";
 import Banner from "../Shared/Banner";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 const Offers = () => {
   const [isListeAll, setIsListeAll] = useState(false);
 
@@ -85,7 +85,7 @@ const Offers = () => {
                     Voir plus
                   </p>
                   <div className="flex justify-center items-center">
-                    <Link to="/#contact">
+                    <Link to="/#conntact">
                       <button className="pt-3 pb-3 pl-5 pr-5 bg-green rounded-full">
                         Réservez
                       </button>
