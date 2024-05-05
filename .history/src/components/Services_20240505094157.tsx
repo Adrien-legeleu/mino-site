@@ -29,12 +29,12 @@ const Services = () => {
       <h2 className="text-center text-white text-5xl">Nos Services</h2>
       <div
         className=" flex flex-col lg:grid lg:grid-cols-30/70 mt-16  "
-        // ref={servicesRef}
+        ref={servicesRef}
       >
         <div className=" w-full h-full relative services">
           <div
             className={`hidden  bg-grayDark rounded-3xl   h-screen lg:flex lg:flex-col w-[150px] items-center scale-90 translate-x-1/2  `}
-            // ref={leftRef}
+            ref={leftRef}
           >
             {servicesInfos.map((serviceInfo, index) => (
               <div
@@ -56,9 +56,8 @@ const Services = () => {
           </div>
         </div>
         <div
-          className="relative grid-cols-1 h-screen overflow-y-scroll  grid w-[95%] md:w-[80%] m-auto"
+          className="relative grid-cols-1  grid w-[95%] md:w-[80%] m-auto"
           id="service"
-          style={{ scrollbarWidth: "none" }}
         >
           {servicesData.map((data, index) => {
             return (

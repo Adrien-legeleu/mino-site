@@ -23,7 +23,7 @@ const ServiceInfo: React.FC<ServiceProps> = ({
             : "transform translate-y-full invisible"
         }`}
       >
-        <ul className="  py-4 px-6  items-center justify-center gap-4 m-auto bg-[#393d44] rounded-full hidden md:flex">
+        <ul className="  py-2 px-6  items-center justify-center gap-4 m-auto bg-[#393d44] rounded-full hidden md:flex">
           <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
           {infoContainerServices.map((info, index) => (
             <a href={`#${info.id}`}>

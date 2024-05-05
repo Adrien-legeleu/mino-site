@@ -16,19 +16,19 @@ const Realisation = () => {
           est conçu avec soin pour répondre aux besoins uniques de nos clients.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 mt-10 lg:grid-cols-3 gap-4 md:gap-20 pl-3 pr-3 md:pl-10 md:pr-10 pb-32 max-w-[1700px] m-auto ">
+      <div className="grid grid-cols-2 md:grid-cols-3 mt-10 lg:grid-cols-4 gap-4 md:gap-8 pl-3 pr-3 md:pl-10 md:pr-10 pb-32 max-w-[1700px] m-auto ">
         {ScreenShotSite.map((site, index) => (
           <div
             className={`relative group rounded-3xl overflow-hidden shadow-xl mt-5 shadow-[rgba(0,0,0,0.3)]`}
             key={`site numéro : ${index}`}
           >
-            <div className="absolute w-full h-full top-0 left-0 z-10 rounded-3xl backdrop-blur-[2px] bg-[rgba(0,0,0,0.3)] opacity-0 group-hover:opacity-100 duration-500 ease-in-out"></div>
+            <div className="absolute w-full h-full top-0 left-0 z-10 rounded-3xl backdrop-blur-[2px] bg-[rgba(0,0,0,0.3)] opacity-0 group-hover:opacity-100 duration-300 ease-in-out"></div>
             <img
-              className="rounded-3xl group-hover:scale-110 duration-500 ease-out objectif-cover"
+              className="rounded-3xl group-hover:scale-110 duration-300 ease-out objectif-cover"
               src={site.img}
               alt={site.title}
             />
-            <div className="absolute z-20 flex flex-col items-center jusitfy-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-500 ease-out">
+            <div className="absolute z-20 flex flex-col items-center jusitfy-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 invisible opacity-0 group-hover:opacity-100 group-hover:visible duration-300 ease-out">
               <h4 className="text-sm md:text-xl  lg:text-2xl text-white text-center">
                 {site.title}
               </h4>
@@ -56,9 +56,9 @@ const ScreenShotSite = [
     url: "https://sushifood.netlify.app",
   },
   {
-    title: "AppBank",
-    img: "./screen-shot-site/app-banque.netlify.app_(Nest Hub Max).png",
-    url: "https://app-banque.netlify.app",
+    title: "Ultralight",
+    img: "./screen-shot-site/ultralight-cycling.netlify.app_(Nest Hub Max).png",
+    url: "https://ultralight-cycling.netlify.app",
   },
   {
     title: "Ty Klouyou",
@@ -66,9 +66,9 @@ const ScreenShotSite = [
     url: "https://villa-tyklouyou.netlify.app",
   },
   {
-    title: "Ultralight",
-    img: "./screen-shot-site/ultralight-cycling.netlify.app_(Nest Hub Max).png",
-    url: "https://ultralight-cycling.netlify.app",
+    title: "AppBank",
+    img: "./screen-shot-site/app-banque.netlify.app_(Nest Hub Max).png",
+    url: "https://app-banque.netlify.app",
   },
   {
     title: "Lurex",

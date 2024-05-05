@@ -23,12 +23,12 @@ const ServiceInfo: React.FC<ServiceProps> = ({
             : "transform translate-y-full invisible"
         }`}
       >
-        <ul className="  py-4 px-6  items-center justify-center gap-4 m-auto bg-[#393d44] rounded-full hidden md:flex">
+        <ul className="  pl-5 p-5  items-center justify-center gap-4 m-auto bg-[#393d44] rounded-full hidden md:flex">
           <div className="absolute w-1/2 top-full left-1/2 -translate-x-1/2 h-1 bg-white rounded-full"></div>
           {infoContainerServices.map((info, index) => (
             <a href={`#${info.id}`}>
               <li key={`numéro : ${index}`}>
-                <button className="text-sm text-center lg:text-md 2xl:text-lg py-3 px-4 bg-green rounded-full hover:scale-[1.03] duration-100">
+                <button className="text-sm text-center lg:text-md xl:text-lg py-3 px-2 bg-green rounded-full hover:scale-[1.03] duration-100">
                   {info.title}
                 </button>
               </li>

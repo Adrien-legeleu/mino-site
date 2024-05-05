@@ -16,7 +16,7 @@ const Realisation = () => {
           est conçu avec soin pour répondre aux besoins uniques de nos clients.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 mt-10 lg:grid-cols-3 gap-4 md:gap-20 pl-3 pr-3 md:pl-10 md:pr-10 pb-32 max-w-[1700px] m-auto ">
+      <div className="grid grid-cols-2 md:grid-cols-3 mt-10 lg:grid-cols-3 gap-4 md:gap-16 pl-3 pr-3 md:pl-10 md:pr-10 pb-32 max-w-[1700px] m-auto ">
         {ScreenShotSite.map((site, index) => (
           <div
             className={`relative group rounded-3xl overflow-hidden shadow-xl mt-5 shadow-[rgba(0,0,0,0.3)]`}

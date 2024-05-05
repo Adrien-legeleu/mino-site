@@ -1,64 +1,50 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ServiceInfo from "./ServicesInfo";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   const [isInfoContainerVisible, setIsInfoContainerVisible] = useState(false);
-  // const servicesRef = useRef(null);
-  // const leftRef = useRef(null);
+  const servicesRef = useRef(null);
+  const leftRef = useRef(null);
 
   const OpenContainerVisible = () => {
     setIsInfoContainerVisible(true);
   };
 
-  // useEffect(() => {
-  //   ScrollTrigger.create({
-  //     trigger: servicesRef.current,
-  //     pin: leftRef.current,
-  //     start: "top top",
-  //     end: "bottom bottom",
-  //     markers: true,
-  //   });
-  // }, []); // Assurez-vous de mettre une dépendance vide ici si vous ne voulez exécuter cette logique qu'une seule fois
+  useEffect(() => {
+    if (servicesRef.current) {
+      gsap.to(leftRef.current, {
+        scrollTrigger: {
+          trigger: servicesRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          pin: true,
+          markers: true,
+        },
+      });
+    }
+  }, []);
 
   return (
-    <div className="h-full w-full bg-grayLight pt-48 pb-48 max-w-[1700px] m-auto ">
+    <div className="h-full w-full bg-grayLight pt-48 pb-48 max-w-[1700px] m-auto">
       <h2 className="text-center text-white text-5xl">Nos Services</h2>
-      <div
-        className=" flex flex-col lg:grid lg:grid-cols-30/70 mt-16  "
-        // ref={servicesRef}
-      >
-        <div className=" w-full h-full relative services">
+      <div className="flex flex-col lg:grid lg:grid-cols-30/70 mt-16" ref={servicesRef}>
+        <div className="w-full h-full relative services">
           <div
-            className={`hidden  bg-grayDark rounded-3xl   h-screen lg:flex lg:flex-col w-[150px] items-center scale-90 translate-x-1/2  `}
-            // ref={leftRef}
+            className="hidden bg-grayDark rounded-3xl h-screen lg:flex lg:flex-col w-[40%] items-center scale-90 translate-x-1/2"
+            ref={leftRef}
           >
-            {servicesInfos.map((serviceInfo, index) => (
-              <div
-                key={`serviceInfo : ${index}`}
-                className="p-3 pb-4 pt-4  flex flex-col gap-5 justify-between h-full items-center"
-              >
-                <div className="bg-[rgba(30,30,30,0.4)] lg:rounded-3xl rounded-2xl w-[85%] flex items-center justify-center relative pt-5 pb-5 ">
-                  <img
-                    src={serviceInfo.img}
-                    alt={serviceInfo.title}
-                    className={`w-[45%] object-contain relative`}
-                  />
-                </div>
-                <h5 className="text-center text-whiteGray text md:text-xl">
-                  {serviceInfo.title}
-                </h5>
-              </div>
-            ))}
+            {/* Votre contenu ici */}
           </div>
         </div>
+      </div>
+    
+
         <div
-          className="relative grid-cols-1 h-screen overflow-y-scroll  grid w-[95%] md:w-[80%] m-auto"
+          className="relative grid-cols-1  grid w-[95%] md:w-[80%] m-auto"
           id="service"
-          style={{ scrollbarWidth: "none" }}
         >
           {servicesData.map((data, index) => {
             return (

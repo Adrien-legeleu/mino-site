@@ -66,6 +66,7 @@ const Select = () => {
 export default Select;
 
 const OptionsSelect = [
+const OptionsSelect = [
   {
     title: "Basic",
     text: "Une option simple et abordable.",
@@ -92,3 +93,5 @@ const OptionsSelect = [
     price: "A voir",
   },
 ];
+
+

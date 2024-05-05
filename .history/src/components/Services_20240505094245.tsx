@@ -58,7 +58,6 @@ const Services = () => {
         <div
           className="relative grid-cols-1 h-screen overflow-y-scroll  grid w-[95%] md:w-[80%] m-auto"
           id="service"
-          style={{ scrollbarWidth: "none" }}
         >
           {servicesData.map((data, index) => {
             return (

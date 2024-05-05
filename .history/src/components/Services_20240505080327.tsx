@@ -1,40 +1,45 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ServiceInfo from "./ServicesInfo";
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   const [isInfoContainerVisible, setIsInfoContainerVisible] = useState(false);
-  // const servicesRef = useRef(null);
-  // const leftRef = useRef(null);
+  const [isLeftVisible, setIsLeftVisible] = useState(false);
+  const servicesRef = useRef(null);
+  const leftRef = useRef(null);
 
   const OpenContainerVisible = () => {
     setIsInfoContainerVisible(true);
   };
 
   // useEffect(() => {
-  //   ScrollTrigger.create({
-  //     trigger: servicesRef.current,
-  //     pin: leftRef.current,
-  //     start: "top top",
-  //     end: "bottom bottom",
-  //     markers: true,
-  //   });
-  // }, []); // Assurez-vous de mettre une dépendance vide ici si vous ne voulez exécuter cette logique qu'une seule fois
+  //   if (servicesRef.current) {
+  //     gsap.to(leftRef.current, {
+  //       scrollTrigger: {
+  //         trigger: servicesRef.current,
+  //         start: "top top",
+  //         end: "bottom bottom",
+  //         pin: leftRef.current,
+  //         markers: true,
+  //       },
+  //     });
+  //   }
+  // }, []);
 
   return (
     <div className="h-full w-full bg-grayLight pt-48 pb-48 max-w-[1700px] m-auto ">
       <h2 className="text-center text-white text-5xl">Nos Services</h2>
       <div
         className=" flex flex-col lg:grid lg:grid-cols-30/70 mt-16  "
-        // ref={servicesRef}
+        ref={servicesRef}
       >
         <div className=" w-full h-full relative services">
           <div
-            className={`hidden  bg-grayDark rounded-3xl   h-screen lg:flex lg:flex-col w-[150px] items-center scale-90 translate-x-1/2  `}
-            // ref={leftRef}
+            className="flex  bg-grayDark rounded-3xl fixed  h-screen lg:flex lg:flex-col w-[40%] items-center scale-90 translate-x-1/2 top-0 left-0"
+            ref={leftRef}
           >
             {servicesInfos.map((serviceInfo, index) => (
               <div
@@ -56,9 +61,8 @@ const Services = () => {
           </div>
         </div>
         <div
-          className="relative grid-cols-1 h-screen overflow-y-scroll  grid w-[95%] md:w-[80%] m-auto"
+          className="relative grid-cols-1  grid w-[95%] md:w-[80%] m-auto"
           id="service"
-          style={{ scrollbarWidth: "none" }}
         >
           {servicesData.map((data, index) => {
             return (
